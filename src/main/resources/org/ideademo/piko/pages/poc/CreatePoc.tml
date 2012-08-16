@@ -1,0 +1,117 @@
+<html t:type="input" title="Create Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+   <t:form t:id="entity" class="appnitro">
+   
+   <div class="form_description">
+     <h2>Pacific Region RCSD Point of Contacts</h2>
+     <p>Use this form to add or update an POC  record into Piko (Worsheet June 2012)</p>
+   </div>		
+   
+   <t:errors/>
+   
+   <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('pocBox');" title="Show or Hide">Individual or Group Contact</legend>
+       <div id="pocBox" class="unhidden">
+		<t:checkbox t:id="groupPoc" t:value="entity.groupPoc"  class="element checkbox" /><t:label for="groupPoc" class="choice" />
+		<t:checkbox t:id="individual" t:value="entity.individual"  class="element checkbox" /><t:label for="individual" class="choice" />
+       </div>
+       
+      </fieldset>
+     </li>
+   
+
+   <ul>
+   
+		<li id="li_name">
+		<t:label class="description" for="name" />
+		<t:textArea t:id="name" t:validate="maxlength=1024" rows="1" cols="90" value="entity.name" />
+		</li>
+		<li id="li_position">
+		<t:label class="description" for="position" />
+		<t:textArea t:id="position" t:validate="maxlength=2048" rows="2" cols="90" value="entity.position" />
+		</li>
+		<li id="li_organization">
+		<t:label class="description" for="organization" />
+		<t:textArea t:id="organization" t:validate="maxlength=2048" rows="2" cols="90" value="entity.organization" />
+		</li>
+		<li id="li_role">
+		<t:label class="description" for="role" />
+		<t:textArea t:id="role" t:validate="maxlength=2048" rows="2" cols="90" value="entity.role" />
+		</li>
+		<li id="li_email">
+		<t:label class="description" for="email" />
+		<t:textArea t:id="email" t:validate="maxlength=255" rows="1" cols="90" value="entity.email" />
+		</li>
+		<li id="li_phone">
+		<t:label class="description" for="phone" />
+		<t:textArea t:id="phone" t:validate="maxlength=255" rows="1" cols="90" value="entity.phone" />
+		</li>
+		<li id="li_mobile">
+		<t:label class="description" for="mobile" />
+		<t:textArea t:id="mobile" t:validate="maxlength=255" rows="1" cols="90" value="entity.mobile" />
+		</li>
+		<li id="li_fax">
+		<t:label class="description" for="fax" />
+		<t:textArea t:id="fax" t:validate="maxlength=255" rows="1" cols="90" value="entity.fax" />
+		</li>
+		<li id="li_url">
+		<t:label class="description" for="url" />
+		<t:textArea t:id="url" t:validate="maxlength=255" rows="1" cols="90" value="entity.url" />
+		</li>
+		<li id="li_address">
+		<t:label class="description" for="address" />
+		<t:textArea t:id="address" t:validate="maxlength=2048" rows="2" cols="90" value="entity.address" />
+		</li>
+		<li id="li_keywords">
+		<t:label class="description" for="keywords" />
+		<t:textArea t:id="keywords" t:validate="maxlength=4096" rows="5" cols="90" value="entity.keywords" />
+		</li>
+		<li id="li_description">
+		<t:label class="description" for="description" />
+		<t:textArea t:id="description" t:validate="maxlength=4096" rows="5" cols="90" value="entity.description" />
+		</li>
+		<li id="li_worksheet">
+		<t:label class="description" for="worksheet" />
+		<t:textArea t:id="worksheet" t:validate="maxlength=255" rows="1" cols="90" value="entity.worksheet" />
+		</li>
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('catBox');" title="Show or Hide">Category or Role</legend>
+       <div id="catBox" class="unhidden">
+		
+		<t:checkbox t:id="federal" t:value="entity.federal"  class="element checkbox" /><t:label for="federal" class="choice" />
+		<t:checkbox t:id="state" t:value="entity.state"  class="element checkbox" /><t:label for="state" class="choice" />
+		<t:checkbox t:id="local" t:value="entity.local"  class="element checkbox" /><t:label for="local" class="choice" />
+		<t:checkbox t:id="interagency" t:value="entity.interagency"  class="element checkbox" /><t:label for="interagency" class="choice" />
+		<t:checkbox t:id="academic" t:value="entity.academic"  class="element checkbox" /><t:label for="academic" class="choice" />
+		<t:checkbox t:id="ngo" t:value="entity.ngo"  class="element checkbox" /><t:label for="ngo" class="choice" />
+		<t:checkbox t:id="contractor" t:value="entity.contractor"  class="element checkbox" /><t:label for="contractor" class="choice" />
+		<t:checkbox t:id="consultant" t:value="entity.consultant"  class="element checkbox" /><t:label for="consultant" class="choice" />
+		<t:checkbox t:id="principalInvestigator" t:value="entity.principalInvestigator"  class="element checkbox" /><t:label for="principalInvestigator" class="choice" />
+		<t:checkbox t:id="pacisChair" t:value="entity.pacisChair"  class="element checkbox" /><t:label for="pacisChair" class="choice" />
+		<t:checkbox t:id="otherContactType" t:value="entity.otherContactType"  class="element checkbox" /><t:label for="otherContactType" class="choice" />		
+       </div>
+       
+      </fieldset>
+     </li>
+
+     <li class="buttons">
+       <t:submit class="button_text" value="Add/Update" />
+       <t:submit t:id="search" value="Search" />
+       (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+       (<t:pagelink page="pocs">CANCEL - go to list</t:pagelink>)
+       
+     </li>
+
+   </ul>
+  </t:form>	
+    
+ </body>
+</html>

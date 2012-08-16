@@ -1,0 +1,11 @@
+<html t:type="layout" title="Add/Update need"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+ <h1>Needs Worksheet</h1>
+ <t:form>
+  <t:beaneditor object="need" /><br /><br />
+  <t:submit value="Create/Edit" />&nbsp;<t:submit t:id="search" value="Search"/>&nbsp;
+  (<t:pagelink page="prop:componentResources.pageName">Clear - form</t:pagelink>)
+  (<t:pagelink page="needs">CANCEL - go to list</t:pagelink>)
+ </t:form> 
+</html>

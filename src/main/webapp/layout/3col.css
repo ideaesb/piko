@@ -1,0 +1,324 @@
+body 
+{
+	margin:0;
+	padding:0;
+	border:0;         /* This removes the border around the viewport in old versions of IE */
+	width:100%;
+	background:#fff;   /* white */
+	font:  normal 60% "Lucida Grande", Helvetica, Verdana, Arial;
+}
+a 
+{
+	color:#369;
+}
+a:hover 
+{
+	color:#fff;
+	background:#369;         /* navy blue */
+	text-decoration:none;
+}
+h1, h2, h3 
+{
+	margin:.8em 0 .2em 0;
+	padding:0;
+}
+p 
+{
+	margin:.4em 0 .8em 0;
+	padding:0;
+}
+img 
+{
+	margin:10px 0 5px;
+}
+#ads img 
+{
+	display:block;
+	padding-top:10px;
+}
+
+/* Header styles */
+#header {
+	clear:both;
+	float:left;
+	width:100%;
+}
+#header 
+{
+	border-bottom:1px solid #000;
+}
+#header p,
+#header h1,
+#header h2 
+{
+	padding:.4em 15px 0 15px;
+	margin:0;
+}
+#header ul 
+{
+	clear:left;
+	float:left;
+	width:100%;
+	list-style:none;
+	margin:10px 0 0 0;
+	padding:0;
+}
+#header ul li 
+{
+	display:inline;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#header ul li a 
+{
+	display:block;
+	float:left;
+	margin:0 0 0 1px;
+	padding:3px 10px;
+	text-align:center;
+	background:#eee;
+	color:#000;
+	text-decoration:none;
+	position:relative;
+	left:15px;
+	line-height:1.3em;
+}
+#header ul li a:hover 
+{
+	background:#369;
+	color:#fff;
+}
+#header ul li a.active,
+#header ul li a.active:hover 
+{
+	color:#fff;
+	background:#000;
+	font-weight:bold;
+}
+#header ul li a span {
+	display:block;
+}
+/* 'widths' sub menu */
+#layoutdims 
+{
+	clear:both;
+	background:#eee;
+	border-top:4px solid #000;
+	margin:0;
+	padding:6px 15px !important;
+	text-align:right;
+}
+/* column container */
+.colmask {
+	position:relative;	/* This fixes the IE7 overflow hidden bug */
+	clear:both;         /* No floating elements allowed on the left or the right side */
+	float:left;
+	width:100%;			/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;			/* width of page */
+	position:relative;
+}
+.col1,
+.col2,
+.col3 {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
+					only padding top and bottom is included here, make it whatever value you need */
+	overflow:hidden;
+}
+/* 3 Column settings */
+.threecol {
+	background:#eee;		/* right column background colour */
+}
+.threecol .colmid {
+	right:33%;			/* width of the right column */
+	/*
+	For absolutely positioned elements, the right property sets the right edge of an element to a unit to the left/right of the right edge of its containing element.
+    For relatively positioned elements, in this case the middle column, the right property sets the right edge of an element to a unit to the left/right to its normal position. 
+	If "position:static", the right property has no effect.
+	*/
+	background:#fff;		/* center column background colour */
+}
+.threecol .colleft {
+	right:34%;			/* width of the middle column */
+	background:#f4f4f4;	/* left column background colour */
+}
+.threecol .col1 {
+	width:28%;			/* width of center column content (column width minus padding on either side) */
+	left:103%;			/* 100% plus left padding of center column */
+}
+.threecol .col2 {
+	width:27%;			/* Width of left column content (column width minus padding on either side) */
+	left:42%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.threecol .col3 {
+	width:27%;			/* Width of right column content (column width minus padding on either side) */
+	left:82%;			/* Please make note of the brackets here:
+					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+}
+/* Footer styles */
+#footer {
+	clear:both;
+	float:left;
+	width:100%;
+	border-top:1px solid #000;
+}
+#footer p {
+	padding:10px;
+	margin:0;
+}
+form.cmxform 
+{
+	/*width: 370px;*/
+	font-size: 1.1em;
+	color: #333;
+}
+form.cmxform em 
+{
+	font-weight: bold;
+	font-style: normal;
+	color: #f00;
+}
+form.cmxform legend 
+{ 
+  padding-left: 0; 
+}
+
+form.cmxform legend,
+form.cmxform label 
+{ 
+   color: #333; 
+}
+form.cmxform fieldset { margin-bottom: 10px; }
+form.cmxform legend 
+{
+	padding: 0 2px;
+	font-weight: bold;
+}
+	
+form.cmxform label 
+{
+    display: inline;
+	line-height: 1.8;
+	vertical-align: top;
+}
+form.cmxform label.padr 
+{
+   padding-right:1em;
+}
+form.cmxform label.choice 
+{
+    margin-left: .5em;
+    display: inline;
+}
+form.cmxform label.blocklbl 
+{
+    display: block;
+}
+form.cmxform fieldset ol 
+{
+	margin: 0;
+	padding: 0;
+}
+form.cmxform fieldset li 
+{
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+form.cmxform fieldset fieldset 
+{
+    background: none; 
+	border: none;
+	margin: 3px 0 0;
+}
+form.cmxform fieldset fieldset legend 
+{
+	padding: 0 0 5px;
+	font-weight: normal;
+}
+form.cmxform fieldset fieldset label 
+{
+	display: block;
+	width: auto;
+	margin-left: 123px;
+}
+form.cmxform input, 
+form.cmxform textarea, 
+form.cmxform select 
+{
+   border: 1px solid #555;
+   padding: 0.5em;
+   /*font-size: 15px;*/
+   line-height: 1.2em;
+   background: #fff;
+ }
+ form.cmxform input[type=checkbox],
+ form.cmxform input[type=radio] 
+ {
+   display: inline-block;
+   line-height: 1em;
+   margin: 0 0.25em 0 0;
+   padding: 0;
+   width: 1.25em;
+   height: 1.25em;
+   vertical-align: text-top;
+ }
+ form.cmxform input[type=checkbox].indent,
+ form.cmxform input[type=radio].indent 
+ {
+   margin-left: 1.5em;
+ }
+form.cmxform input[type=radio] 
+{
+   -webkit-border-radius: 2em; /* Make radios round */
+}
+/* begin css tabs */
+
+ul#tabnav { /* general settings */
+text-align: left; /* set to left, right or center */
+margin: 1em 0 1em 0; /* set margins as desired */
+font: bold 11px verdana, arial, sans-serif; /* set font as desired */
+border-bottom: 1px solid #6c6; /* set border COLOR as desired */
+list-style-type: none;
+padding: 3px 10px 3px 10px; /* THIRD number must change with respect to padding-top (X) below */
+}
+
+ul#tabnav li { /* do not change */
+display: inline;
+}
+
+body#Index li.Index, body#Needs li.Needs, body#Daps li.Daps, body#Paws li.Paws, body#Orgs li.Orgs, body#Bibs li.Bibs, body#Asmts li.Asmts, body#Pocs li.Pocs{ /* settings for selected tab */
+border-bottom: 1px solid #fff; /* set border color to page background color */
+background-color: #fff; /* set background color to match above border color */
+}
+
+body#Index li.Index a, body#Needs li.Needs a, body#Daps li.Daps a, body#Paws li.Paws a, body#Orgs li.Orgs a, body#Bibs li.Bibs a, body#Asmts li.Asmts a, body#Pocs li.Pocs a { /* settings for selected tab link */
+background-color: #fff; /* set selected tab background color as desired */
+color: #000; /* set selected tab link color as desired */
+position: relative;
+top: 1px;
+padding-top: 4px; /* must change with respect to padding (X) above and below */
+}
+
+ul#tabnav li a { /* settings for all tab links */
+padding: 3px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+border: 1px solid #6c6; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+background-color: #cfc; /* set unselected tab background color as desired */
+color: #666; /* set unselected tab link color as desired */
+margin-right: 10px; /* set additional spacing between tabs as desired */
+text-decoration: none;
+border-bottom: none;
+}
+
+ul#tabnav a:hover { /* settings for hover effect */
+background: #fff; /* set desired hover color */
+

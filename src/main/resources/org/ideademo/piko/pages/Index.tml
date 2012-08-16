@@ -1,0 +1,43 @@
+<html t:type="layout" 
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <h1>Worksheets Version June 2012</h1>
+    
+    <form t:type="form" t:id="searchCriteria">
+    
+    <t:zone t:id="editZone"> 
+    
+    <ul>
+      <li><t:pagelink page="daps">List, View, Search All <strong>Data, Products &amp; Services</strong> Worksheets</t:pagelink></li>
+      <li><t:pagelink page="dap/${editMode}">Creat A New <strong>Data, Products &amp; Services</strong> Worksheet</t:pagelink></li>
+    </ul>
+
+    <ul>
+      <li><t:pagelink page="paws">List, View, Search All <strong>Projects &amp; Activities</strong> Worksheets</t:pagelink></li>
+      <li><t:pagelink page="paw/${editMode}">Creat A New <strong>Projects &amp; Activities</strong> Worksheet</t:pagelink></li>
+    </ul>
+
+    <ul>
+      <li><t:pagelink page="asmts">List, View, Search All <strong>Assessments</strong> Worksheets</t:pagelink></li>
+      <li><t:pagelink page="asmt/${editMode}">Creat A New <strong>Assessment</strong> Worksheet</t:pagelink></li>
+    </ul>
+
+    <ul>
+      <li><t:pagelink page="orgs">List, View, Search All <strong>Partners &amp; Programs</strong></t:pagelink></li>
+      <li><t:pagelink page="org/${editMode}">Creat A New <strong>Partners &amp; Programs</strong></t:pagelink></li>
+    </ul>
+
+    <ul>
+      <li><t:pagelink page="pocs">List, View, Search All <strong>Contacts</strong></t:pagelink></li>
+      <li><t:pagelink page="poc/${editMode}">Creat A New <strong>Contact</strong></t:pagelink></li>
+    </ul>
+    
+    </t:zone>
+
+
+    <t:label for="editChoice"/>:  <t:select t:id="editChoice" t:model="editChoices"  t:zone="editZone"  t:blankOption="ALWAYS" t:blankLabel="Choose..." /> 
+
+    </form>
+
+</html>

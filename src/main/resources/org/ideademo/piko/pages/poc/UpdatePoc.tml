@@ -1,0 +1,84 @@
+<html t:type="dense" title="UPDATE Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+<form t:type="Form" t:id="poc" class="cmxform">
+<t:errors/>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<div class="col1">
+			
+              <fieldset>
+                <legend>Partner/Program</legend>
+				<t:checkbox t:id="groupPoc" t:value="entity.groupPoc"  /><t:label for="groupPoc" /><br />
+				<t:checkbox t:id="individual" t:value="entity.individual"  /><t:label for="individual" class="padr" />
+               </fieldset>
+
+
+				<t:label class="blocklbl" for="name" />
+				<t:textArea t:id="name" t:validate="maxlength=1024" rows="1" cols="30" value="entity.name" />
+				<t:label class="blocklbl" for="position" />
+				<t:textArea t:id="position" t:validate="maxlength=2048" rows="1" cols="30" value="entity.position" />
+				<t:label class="blocklbl" for="organization" />
+				<t:textArea t:id="organization" t:validate="maxlength=2048" rows="1" cols="30" value="entity.organization" />
+				<t:label class="blocklbl" for="role" />
+				<t:textArea t:id="role" t:validate="maxlength=2048" rows="1" cols="30" value="entity.role" />
+				<t:label class="blocklbl" for="email" />
+				<t:textArea t:id="email" t:validate="maxlength=255" rows="1" cols="30" value="entity.email" />
+				<t:label class="blocklbl" for="phone" />
+				<t:textArea t:id="phone" t:validate="maxlength=255" rows="1" cols="30" value="entity.phone" />
+				<t:label class="blocklbl" for="mobile" />
+				<t:textArea t:id="mobile" t:validate="maxlength=255" rows="1" cols="30" value="entity.mobile" />
+				<t:label class="blocklbl" for="fax" />
+				<t:textArea t:id="fax" t:validate="maxlength=255" rows="1" cols="30" value="entity.fax" />
+				<t:label class="blocklbl" for="url" />
+				<t:textArea t:id="url" t:validate="maxlength=255" rows="1" cols="30" value="entity.url" />
+				<t:label class="blocklbl" for="address" />
+				<t:textArea t:id="address" t:validate="maxlength=2048" rows="1" cols="30" value="entity.address" />
+				<t:label class="blocklbl" for="keywords" />
+				<t:textArea t:id="keywords" t:validate="maxlength=4096" rows="1" cols="30" value="entity.keywords" />
+				<t:label class="blocklbl" for="description" />
+				<t:textArea t:id="description" t:validate="maxlength=4096" rows="1" cols="30" value="entity.description" />
+				<t:label class="blocklbl" for="worksheet" />
+                <t:textArea t:id="worksheet" t:validate="maxlength=255" rows="1" cols="30" value="entity.worksheet" />
+              
+              
+              
+              <fieldset>
+                <legend>Category/Type or Role</legend>
+				<t:checkbox t:id="federal" t:value="entity.federal"  /><t:label for="federal" class="padr" />
+				<t:checkbox t:id="state" t:value="entity.state"  /><t:label for="state" class="padr" />
+				<t:checkbox t:id="local" t:value="entity.local"  /><t:label for="local" class="padr" />
+				<t:checkbox t:id="interagency" t:value="entity.interagency"  /><t:label for="interagency" /><br />
+				<t:checkbox t:id="academic" t:value="entity.academic"  /><t:label for="academic" class="padr" />
+				<t:checkbox t:id="ngo" t:value="entity.ngo"  /><t:label for="ngo" /><br />
+				<t:checkbox t:id="contractor" t:value="entity.contractor"  /><t:label for="contractor" class="padr" />
+				<t:checkbox t:id="consultant" t:value="entity.consultant"  /><t:label for="consultant" class="padr" />
+				<t:checkbox t:id="principalInvestigator" t:value="entity.principalInvestigator"  /><t:label for="principalInvestigator" /><br />
+				<t:checkbox t:id="pacisChair" t:value="entity.pacisChair"  /><t:label for="pacisChair" class="padr" />
+				<t:checkbox t:id="otherContactType" t:value="entity.otherContactType"  /><t:label for="otherContactType" class="padr" />
+               </fieldset>
+
+              <br /><br />
+              
+                  <t:submit value="Add/Update" />&nbsp;&nbsp;
+                  <t:submit t:id="search" value="Search" />
+                  (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+                  (<t:pagelink page="pocs">CANCEL - go to list</t:pagelink>)
+              
+
+			</div>
+
+
+			<div class="col2"></div>
+			<div class="col3"></div>
+
+
+		</div>
+	</div>
+</div>
+</form>	
+</body>
+</html>

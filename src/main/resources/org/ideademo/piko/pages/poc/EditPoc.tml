@@ -1,0 +1,11 @@
+<html t:type="layout" title="Add/Update POC"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+  <h1>Contact Worksheet</h1>
+ <t:form>
+  <t:beaneditor object="entity" /><br /><br />
+  <t:submit value="Create/Edit" />&nbsp;<t:submit t:id="search" value="Search"/>&nbsp;
+  (<t:pagelink page="prop:componentResources.pageName">Clear - form</t:pagelink>)
+  (<t:pagelink page="pocs">CANCEL - go to list</t:pagelink>)
+ </t:form>
+</html>

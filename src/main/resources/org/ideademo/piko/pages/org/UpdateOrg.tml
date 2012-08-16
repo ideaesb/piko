@@ -1,0 +1,77 @@
+<html t:type="dense" title="UPDATE Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+<form t:type="Form" t:id="org" class="cmxform">
+<t:errors/>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<div class="col1">
+			
+              <fieldset>
+                <legend>Partner/Program</legend>
+                  <t:checkbox t:id="agency" t:value="org.agency" /><t:label for="agency" /><br />
+                  <t:checkbox t:id="pmops" t:value="org.pmops" /><t:label for="pmops" /><br />
+               </fieldset>
+
+
+              <t:label for="code" class="blocklbl" />
+              <t:textArea t:id="code" t:validate="maxlength=255" rows="1" size="15" value="org.code" />
+
+			  <t:label for="name" class="blocklbl" />
+              <t:textArea t:id="name" t:validate="maxlength=1024" rows="2" cols="50" value="org.name" />
+
+              <t:label for="contact" class="blocklbl" />
+              <t:textArea t:id="contact" t:validate="maxlength=2048" rows="1" cols="50" value="org.contact" />
+
+			  <t:label for="description" class="blocklbl" />
+              <t:textArea t:id="description" t:validate="maxlength=4096" rows="5" cols="50" value="org.description" />
+
+			  <t:label for="url" class="blocklbl" />
+              <t:textArea t:id="url" t:validate="maxlength=255" rows="1" cols="50" value="org.url" />
+
+			  <t:label for="logo" class="blocklbl" />
+              <t:textArea t:id="logo" t:validate="maxlength=255" rows="1" cols="50" value="org.logo" />
+
+			  <t:label for="worksheet" class="blocklbl" />
+              <t:textArea t:id="worksheet" t:validate="maxlength=255" rows="1" cols="50" value="org.worksheet" />
+
+			  <t:label for="keywords" class="blocklbl" />
+              <t:textArea t:id="keywords" t:validate="maxlength=4096" rows="5" cols="50" value="org.keywords" />
+              
+              
+              
+              <fieldset>
+                <legend>Category/Type</legend>
+                 <t:checkbox t:id="federal" t:value="org.federal" /><t:label for="federal" class="padr" />
+                 <t:checkbox t:id="state" t:value="org.state" /><t:label for="state" class="padr" />
+                 <t:checkbox t:id="local" t:value="org.local" /><t:label for="local" class="padr" />
+                 <t:checkbox t:id="interagency" t:value="org.interagency" /><t:label for="interagency" class="padr" />
+                 <t:checkbox t:id="academic" t:value="org.academic" /><t:label for="academic" class="padr" /><br />
+                 <t:checkbox t:id="ngo" t:value="org.ngo" /><t:label for="ngo" class="padr" />
+                 <t:checkbox t:id="otherPartnerType" t:value="org.otherPartnerType" /><t:label for="otherPartnerType" class="padr" />
+               </fieldset>
+
+              <br /><br />
+              
+                  <t:submit value="Add/Update" />&nbsp;&nbsp;
+                  <t:submit t:id="search" value="Search" />
+                  (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+                  (<t:pagelink page="orgs">CANCEL - go to list</t:pagelink>)
+              
+
+			</div>
+
+
+			<div class="col2"></div>
+			<div class="col3"></div>
+
+
+		</div>
+	</div>
+</div>
+</form>	
+</body>
+</html>

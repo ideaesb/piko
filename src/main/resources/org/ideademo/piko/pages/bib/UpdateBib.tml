@@ -1,0 +1,49 @@
+<html t:type="dense" title="UPDATE Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+<form t:type="Form" t:id="bib" class="cmxform">
+<t:errors/>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<div class="col1">
+			
+			  <t:label for="name" class="blocklbl" />
+              <t:textArea t:id="name" t:validate="maxlength=255" rows="3" cols="50" value="bib.name" />
+
+			  <t:label for="description" class="blocklbl" />
+              <t:textArea t:id="description" t:validate="maxlength=4096" rows="5" cols="50" value="bib.description" />
+			
+			  <t:label for="url" class="blocklbl" />
+              <t:textArea t:id="url" t:validate="maxlength=255" rows="1" cols="50" value="bib.url" />
+
+			  <t:label for="worksheet" class="blocklbl" />
+              <t:textArea t:id="worksheet" t:validate="maxlength=4096" rows="1" cols="50" value="bib.worksheet" />
+
+
+			  <t:label for="keywords" class="blocklbl" />
+              <t:textArea t:id="keywords" t:validate="maxlength=255" rows="5" cols="50" value="bib.keywords" />
+              
+              <br /><br />
+              
+                  <t:submit value="Add/Update" />&nbsp;&nbsp;
+                  <t:submit t:id="search" value="Search" />
+                  (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+                  (<t:pagelink page="bibs">CANCEL - go to list</t:pagelink>)
+              
+
+			</div>
+
+
+			<div class="col2"></div>
+			<div class="col3"></div>
+
+
+		</div>
+	</div>
+</div>
+</form>	
+</body>
+</html>

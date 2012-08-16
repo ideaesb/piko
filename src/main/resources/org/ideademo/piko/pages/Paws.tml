@@ -1,0 +1,41 @@
+<html t:type="layout" title="paws List"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+ <body>
+ <h1>Projects &amp; Activities Worksheets</h1>
+   <div align="center">
+       <form t:type="Form" t:id="searchForm">
+         <input t:type="TextField" t:id="searchText" size="30" value="searchText" />    
+         <t:submit t:id="search" value="Search" /><t:submit t:id="clear" value="Clear" />  
+  
+       </form>
+   </div>
+ 
+  <div style="background-color:orange;text-align:center;font-family:Verdana, Geneva, sans-serif">      
+   <t:pagelink page="paw/${editMode}">Create Record (OR Advanced Search)</t:pagelink>
+  </div>
+  <div align="center">
+  <t:grid source="paws" row="pawRow" add="delete"  include="name,description,keywords,contact">
+    <p:deleteCell>
+      <t:actionlink t:id="delete" context="pawRow.id">Delete</t:actionlink>
+    </p:deleteCell>
+    <p:nameCell>
+     <t:pagelink page="paw/${editMode}" context="pawRow.id">${pawRow.name}</t:pagelink>
+    </p:nameCell>
+    <p:descriptionCell>
+     ${pawRow.description}
+       <t:if test="${pawRow.worksheetExists}">
+         (<a href="${url}/${pawRow.worksheet}"  target="_blank">More...</a>)
+       <p:else>
+         (<t:pagelink page="paw/upload" context="pawRow.id">Upload ...</t:pagelink>)
+       </p:else>
+       </t:if>
+    </p:descriptionCell>
+     <p:empty>
+       <p>There are no Projects &amp; Activities Worksheets (matching the criteria); you can <t:pagelink page="paw/${editMode}">add some</t:pagelink> (or <t:actionlink t:id="showAll">show all</t:actionlink>)</p>
+     </p:empty>
+  </t:grid>
+  </div>
+ </body>
+</html>

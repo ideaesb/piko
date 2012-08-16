@@ -1,0 +1,339 @@
+<html t:type="dense" title="UPDATE Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+<form t:type="Form" t:id="need" class="cmxform">
+<t:errors/>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<div class="col1">
+			
+			  <t:label for="description" class="blocklbl" />
+              <t:textArea t:id="description" t:validate="maxlength=4096" rows="5" cols="50" value="need.description" />
+			
+			  <t:label for="url" class="blocklbl" />
+              <t:textArea t:id="url" t:validate="maxlength=255" rows="1" cols="50" value="need.url" />
+
+			  <t:label for="worksheet" class="blocklbl" />
+              <t:textArea t:id="worksheet" t:validate="maxlength=255" rows="1" cols="50" value="need.worksheet" />
+
+			  <t:label for="objectives" class="blocklbl" />
+              <t:textArea t:id="objectives" t:validate="maxlength=255" rows="1" cols="50" value="need.objectives" />
+			
+			  <t:label for="source" class="blocklbl" />
+              <t:textArea t:id="source" t:validate="maxlength=255" rows="1" cols="50" value="need.source" />
+
+			  <t:label for="requestor" class="blocklbl" />
+              <t:textArea t:id="requestor" t:validate="maxlength=255" rows="1" cols="50" value="need.requestor" />
+
+			  <t:label for="feedback" class="blocklbl" />
+              <t:textArea t:id="feedback" t:validate="maxlength=255" rows="1" cols="50" value="need.feedback" />
+
+			  <t:label for="data" class="blocklbl" />
+              <t:textArea t:id="data" t:validate="maxlength=255" rows="1" cols="50" value="need.data" />
+
+			  <t:label for="products" class="blocklbl" />
+              <t:textArea t:id="products" t:validate="maxlength=255" rows="1" cols="50" value="need.products" />
+
+			  <t:label for="services" class="blocklbl" />
+              <t:textArea t:id="services" t:validate="maxlength=255" rows="1" cols="50" value="need.services" />
+
+			  <t:label for="programs" class="blocklbl" />
+              <t:textArea t:id="programs" t:validate="maxlength=255" rows="1" cols="50" value="need.programs" />
+
+			  <t:label for="projects" class="blocklbl" />
+              <t:textArea t:id="projects" t:validate="maxlength=255" rows="1" cols="50" value="need.projects" />
+
+
+			  <t:label for="comments" class="blocklbl" />
+              <t:textArea t:id="comments" t:validate="maxlength=2048" rows="4" cols="50" value="need.comments" />
+
+			  <t:label for="keywords" class="blocklbl" />
+              <t:textArea t:id="keywords" t:validate="maxlength=4096" rows="4" cols="50" value="need.keywords" />
+              
+              <br /><br />
+              
+                  <t:submit value="Add/Update" />&nbsp;&nbsp;
+                  <t:submit t:id="search" value="Search" />
+                  
+                     (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+                     (<t:pagelink page="needs">CANCEL - go to list</t:pagelink>)
+                  
+              
+
+			</div>
+			<div class="col2">
+
+              <t:label for="code" class="blocklbl" />
+              <t:textArea t:id="code" t:validate="maxlength=255" rows="1" size="15" value="need.code" />
+
+              <t:label for="name" class="blocklbl" />
+              <t:textArea  t:id="name" t:validate="maxlength=255" rows="1" cols="50" value="need.name" />
+
+              <t:label for="organization" class="blocklbl" />
+              <t:textArea t:id="organization" t:validate="maxlength=255" rows="1" cols="50" value="need.organization" />
+
+               <t:label for="contact" class="blocklbl" />
+               <t:textArea t:id="contact" t:validate="maxlength=255" rows="1" cols="50" value="need.contact" />
+              
+              <fieldset>
+               <legend>Status</legend>
+                <t:checkbox t:id="ongoing" t:value="need.ongoing" /><t:label for="ongoing" class="padr"/>
+                <t:checkbox t:id="planned" t:value="need.planned" /><t:label for="planned" class="padr"/>
+                <t:checkbox t:id="proposed" t:value="need.proposed" /><t:label for="proposed" class="padr"/>
+                <t:checkbox t:id="completed" t:value="need.completed" /><t:label for="completed" />
+               </fieldset>
+
+              <fieldset>
+               <legend>Priority</legend>
+                <t:checkbox t:id="high" t:value="need.high" /><t:label for="high" class="padr"/>
+                <t:checkbox t:id="mid" t:value="need.mid" /><t:label for="mid" class="padr"/>
+                <t:checkbox t:id="low" t:value="need.low" /><t:label for="low" class="padr"/>
+                <t:checkbox t:id="unknown" t:value="need.unknown" /><t:label for="unknown" />
+               </fieldset>
+              
+
+               <fieldset>
+                <legend>Focus Area</legend>
+                 <t:checkbox t:id="sustainability" t:value="need.sustainability" /><t:label for="sustainability" /><br />
+                 <t:checkbox t:id="resilience" t:value="need.resilience" /><t:label for="resilience" /><br />
+                 <t:checkbox t:id="water" t:value="need.water" /><t:label for="water" /><br />
+                 <t:checkbox t:id="extremes" t:value="need.extremes" /><t:label for="extremes" /><br />
+                 <t:checkbox t:id="conservation" t:value="need.conservation" /><t:label for="conservation" /><br />
+               </fieldset>
+               
+
+               <fieldset>
+                <legend>Area of Applicability</legend>
+                
+                 <t:checkbox t:id="international" t:value="need.international" /><t:label for="international" /><br />
+                   <t:checkbox t:id="canada" t:value="need.canada" class="indent" /><t:label for="canada" class="padr" />
+                   <t:checkbox t:id="newBrunswick" t:value="need.newBrunswick" /><t:label for="newBrunswick" class="padr" />
+                   <t:checkbox t:id="novaScotia" t:value="need.novaScotia" /><t:label for="novaScotia" class="padr" />
+                   <t:checkbox t:id="quebec" t:value="need.quebec" /><t:label for="quebec" /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <t:checkbox t:id="princeEdwardIsland" t:value="need.princeEdwardIsland" class="indent" /><t:label for="princeEdwardIsland" class="padr" />
+                   <t:checkbox t:id="newfoundland" t:value="need.newfoundland" /><t:label for="newfoundland" class="padr" />
+                   <t:checkbox t:id="labrador" t:value="need.labrador" /><t:label for="labrador" /><br />
+                   
+                 <t:checkbox t:id="national" t:value="need.national" /><t:label for="national" class="padr"/>
+                 <t:checkbox t:id="regionalOrState" t:value="need.regionalOrState" /><t:label for="regionalOrState" /><br />
+                   <t:checkbox t:id="newEngland" t:value="need.newEngland" class="indent" /><t:label for="newEngland" class="padr" />
+                   <t:checkbox t:id="maine" t:value="need.maine" /><t:label for="maine" class="padr" />
+                   <t:checkbox t:id="newHampshire" t:value="need.newHampshire" /><t:label for="newHampshire" class="padr" />
+                   <t:checkbox t:id="massachusetts" t:value="need.massachusetts" /><t:label for="massachusetts" /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <t:checkbox t:id="vermont" t:value="need.vermont" class="indent" /><t:label for="vermont" class="padr" />
+                   <t:checkbox t:id="connecticut" t:value="need.connecticut" /><t:label for="connecticut" class="padr" />
+                   <t:checkbox t:id="rhodeIsland" t:value="need.rhodeIsland" /><t:label for="rhodeIsland" /><br />
+                   <t:checkbox t:id="midAtlantic" t:value="need.midAtlantic" class="indent" /><t:label for="midAtlantic" class="padr" />
+                   <t:checkbox t:id="newYork" t:value="need.newYork" /><t:label for="newYork" class="padr" />
+                   <t:checkbox t:id="newJersey" t:value="need.newJersey" /><t:label for="newJersey" class="padr" />
+                   <t:checkbox t:id="pennsylvania" t:value="need.pennsylvania" /><t:label for="pennsylvania" class="padr" /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <t:checkbox t:id="marlyland" t:value="need.marlyland" class="indent" /><t:label for="marlyland" class="padr" />
+                   <t:checkbox t:id="virginia" t:value="need.virginia" /><t:label for="virginia" class="padr" />
+                   <t:checkbox t:id="districtOfColumbia" t:value="need.districtOfColumbia" /><t:label for="districtOfColumbia" class="padr" />
+                   <t:checkbox t:id="delaware" t:value="need.delaware" /><t:label for="delaware" /><br />
+                   <t:checkbox t:id="central" t:value="need.central" class="indent" /><t:label for="central" class="padr" />
+                   <t:checkbox t:id="westVirginia" t:value="need.westVirginia" /><t:label for="westVirginia" /><br />
+                   <t:checkbox t:id="greatLakes" t:value="need.greatLakes" class="indent" /><t:label for="greatLakes" class="padr" />
+                   <t:checkbox t:id="ohio" t:value="need.ohio" /><t:label for="ohio" /><br />
+                   <t:checkbox t:id="southEast" t:value="need.southEast" class="indent" /><t:label for="southEast" class="padr" />
+                   <t:checkbox t:id="northCarolina" t:value="need.northCarolina" /><t:label for="northCarolina" class="padr" />
+                   <t:checkbox t:id="southCarolina" t:value="need.southCarolina" /><t:label for="southCarolina" /><br />
+                   
+                 <t:checkbox t:id="localCity" t:value="need.localCity" /><t:label for="localCity" /><br />
+                 <t:checkbox t:id="problemFocused" t:value="need.problemFocused" /><t:label for="problemFocused" /><br />
+
+
+               </fieldset>
+               
+               <fieldset>
+                 <legend>Scientific Discipline</legend>
+                 
+				<t:checkbox t:id="physical" t:value="need.physical" /><t:label for="physical" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="atmospheric" t:value="need.atmospheric" /><t:label for="atmospheric" class="padr" />
+				<t:checkbox t:id="surfaceAtmosphere" t:value="need.surfaceAtmosphere" /><t:label for="surfaceAtmosphere" class="padr" />
+				<t:checkbox t:id="upperAir" t:value="need.upperAir" /><t:label for="upperAir" class="padr" />
+				<t:checkbox t:id="composition" t:value="need.composition" /><t:label for="composition" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="coastalAndOceanic" t:value="need.coastalAndOceanic" /><t:label for="coastalAndOceanic" class="padr" />
+				<t:checkbox t:id="surface" t:value="need.surface" /><t:label for="surface" class="padr" />
+				<t:checkbox t:id="subSurface" t:value="need.subSurface" /><t:label for="subSurface" class="padr" />
+				<t:checkbox t:id="ground" t:value="need.ground" /><t:label for="ground" class="padr" /><br />
+				<t:checkbox t:id="ecologicalAndBiological" t:value="need.ecologicalAndBiological" /><t:label for="ecologicalAndBiological" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="population" t:value="need.population" /><t:label for="population" class="padr" />
+				<t:checkbox t:id="ecosystem" t:value="need.ecosystem" /><t:label for="ecosystem" class="padr" />
+				<t:checkbox t:id="organism" t:value="need.organism" /><t:label for="organism" class="padr" />
+				<t:checkbox t:id="microbial" t:value="need.microbial" /><t:label for="microbial" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="otherBiologicalOrEcological" t:value="need.otherBiologicalOrEcological" /><t:label for="otherBiologicalOrEcological" /><br />
+				<t:checkbox t:id="geological" t:value="need.geological" /><t:label for="geological" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="paleoClimate" t:value="need.paleoClimate" /><t:label for="paleoClimate" class="padr" />
+		        <t:checkbox t:id="pollenCounting" t:value="need.pollenCounting" /><t:label for="pollenCounting" class="padr" />
+				<t:checkbox t:id="porosity" t:value="need.porosity" /><t:label for="porosity" class="padr" />
+				<t:checkbox t:id="otherGeological" t:value="need.otherGeological" /><t:label for="otherGeological" class="padr" /><br />
+				<t:checkbox t:id="chemical" t:value="need.chemical" /><t:label for="chemical" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="ph" t:value="need.ph" /><t:label for="ph" class="padr" />
+				<t:checkbox t:id="carbonConcentration" t:value="need.carbonConcentration" /><t:label for="carbonConcentration" class="padr" />
+				<t:checkbox t:id="otherChemical" t:value="need.otherChemical" /><t:label for="otherChemical" class="padr" /><br />
+				<t:checkbox t:id="climateSocietyInteractions" t:value="need.climateSocietyInteractions" /><t:label for="climateSocietyInteractions" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="socialAndEconomic" t:value="need.socialAndEconomic" /><t:label for="socialAndEconomic" class="padr" />
+				<t:checkbox t:id="decisionMaking" t:value="need.decisionMaking" /><t:label for="decisionMaking" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="riskAssessmentOrRiskManagement" t:value="need.riskAssessmentOrRiskManagement" /><t:label for="riskAssessmentOrRiskManagement" class="padr" />
+				<t:checkbox t:id="policyPlanning" t:value="need.policyPlanning" /><t:label for="policyPlanning" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="communicationAndEducation" t:value="need.communicationAndEducation" /><t:label for="communicationAndEducation" class="padr" />
+				<t:checkbox t:id="otherClimateSocietyInteractions" t:value="need.otherClimateSocietyInteractions" /><t:label for="otherClimateSocietyInteractions" class="padr" />
+                 
+                 
+               </fieldset>
+
+
+			</div>
+			<div class="col3">
+
+       
+               <fieldset>
+                <legend>Capability Area</legend>
+                 <t:checkbox t:id="ecv" t:value="need.ecv" /><t:label for="ecv" /><br />
+                 <t:checkbox t:id="impacts" t:value="need.impacts" /><t:label for="impacts" class="padr" />
+                 <t:checkbox t:id="vulnerabilityAssessments" t:value="need.vulnerabilityAssessments" /><t:label for="vulnerabilityAssessments" /><br />
+                 <t:checkbox t:id="riskAssessments" t:value="need.riskAssessments" /><t:label for="riskAssessments" class="padr" />
+                 <t:checkbox t:id="needs" t:value="need.needs" /><t:label for="needs" /><br />
+                 <t:checkbox t:id="scenarioPlanning" t:value="need.scenarioPlanning" /><t:label for="scenarioPlanning" class="padr" />
+                 <t:checkbox t:id="experimentalImpacts" t:value="need.experimentalImpacts" /><t:label for="experimentalImpacts" class="padr" />
+                 <t:checkbox t:id="monitor" t:value="need.monitor" /><t:label for="monitor" /><br />
+                 <t:checkbox t:id="downscale" t:value="need.downscale" /><t:label for="downscale" class="padr" />
+                 <t:checkbox t:id="conditions" t:value="need.conditions" /><t:label for="conditions" /><br />
+                 <t:checkbox t:id="forecastImpacts" t:value="need.forecastImpacts" /><t:label for="forecastImpacts" class="padr" />
+                 <t:checkbox t:id="economicImpacts" t:value="need.economicImpacts" /><t:label for="economicImpacts" /><br />
+                 <t:checkbox t:id="publicSecurity" t:value="need.publicSecurity" /><t:label for="publicSecurity" /><br />
+                 <t:checkbox t:id="mitigation" t:value="need.mitigation" /><t:label for="mitigation" /><br />
+                 <t:checkbox t:id="translation" t:value="need.translation" /><t:label for="translation" /><br />
+                 <t:checkbox t:id="tools" t:value="need.tools" /><t:label for="tools" /><br />
+                 <t:checkbox t:id="stakeholder" t:value="need.stakeholder" /><t:label for="stakeholder" /><br />
+                 <t:checkbox t:id="guidance" t:value="need.guidance" /><t:label for="guidance" class="padr" />
+                 <t:checkbox t:id="literacy" t:value="need.literacy" /><t:label for="literacy" /><br />
+                 <t:checkbox t:id="translate" t:value="need.translate" /><t:label for="translate" /><br />
+                 <t:checkbox t:id="improve" t:value="need.improve" /><t:label for="improve" /><br />
+			
+               </fieldset>			
+               
+               <fieldset>
+                <legend>Sector</legend>
+                
+                <t:checkbox t:id="publicHealth" t:value="need.publicHealth" /><t:label for="publicHealth" class="padr" />
+				<t:checkbox t:id="emergencyManagement" t:value="need.emergencyManagement" /><t:label for="emergencyManagement" /><br />
+				<t:checkbox t:id="indirectClimateHazards" t:value="need.indirectClimateHazards" /><t:label for="indirectClimateHazards" class="padr" />
+				<t:checkbox t:id="vectorBorneIllness" t:value="need.vectorBorneIllness" /><t:label for="vectorBorneIllness" /><br />
+				<t:checkbox t:id="heatRelated" t:value="need.heatRelated" /><t:label for="heatRelated" class="padr" />
+				<t:checkbox t:id="waterQuality" t:value="need.waterQuality" /><t:label for="waterQuality" class="padr" />
+				<t:checkbox t:id="infrastructure" t:value="need.infrastructure" /><t:label for="infrastructure" class="padr" />
+				<t:checkbox t:id="energy" t:value="need.energy" /><t:label for="energy" /><br />
+				<t:checkbox t:id="communication" t:value="need.communication" /><t:label for="communication" class="padr" />
+				<t:checkbox t:id="freshWaterResources" t:value="need.freshWaterResources" /><t:label for="freshWaterResources" /><br />
+				<t:checkbox t:id="stormWater" t:value="need.stormWater" /><t:label for="stormWater" class="padr" />
+				<t:checkbox t:id="wastewater" t:value="need.wastewater" /><t:label for="wastewater" class="padr" />
+				<t:checkbox t:id="waterSupply" t:value="need.waterSupply" /><t:label for="waterSupply" class="padr" />
+				<t:checkbox t:id="transportation" t:value="need.transportation" /><t:label for="transportation" /><br />
+				<t:checkbox t:id="builtCoast" t:value="need.builtCoast" /><t:label for="builtCoast" class="padr" />
+				<t:checkbox t:id="managedEcosystems" t:value="need.managedEcosystems" /><t:label for="managedEcosystems" class="padr" />
+				<t:checkbox t:id="fisheries" t:value="need.fisheries" /><t:label for="fisheries" class="padr" />
+				<t:checkbox t:id="aquaculture" t:value="need.aquaculture" /><t:label for="aquaculture" /><br />
+				<t:checkbox t:id="agriculture" t:value="need.agriculture" /><t:label for="agriculture" class="padr" />
+				<t:checkbox t:id="forests" t:value="need.forests" /><t:label for="forests" class="padr" />
+				<t:checkbox t:id="otherManagedEcosystems" t:value="need.otherManagedEcosystems" /><t:label for="otherManagedEcosystems" /><br />
+				<t:checkbox t:id="naturalEcosystems" t:value="need.naturalEcosystems" /><t:label for="naturalEcosystems" class="padr" />
+				<t:checkbox t:id="coasts" t:value="need.coasts" /><t:label for="coasts" class="padr" />
+				<t:checkbox t:id="estuaries" t:value="need.estuaries" /><t:label for="estuaries" class="padr" />
+				<t:checkbox t:id="wetlands" t:value="need.wetlands" /><t:label for="wetlands" class="padr" />
+				<t:checkbox t:id="oceans" t:value="need.oceans" /><t:label for="oceans" /><br />
+				<t:checkbox t:id="inland" t:value="need.inland" /><t:label for="inland" class="padr" />
+				<t:checkbox t:id="beaches" t:value="need.beaches" /><t:label for="beaches" class="padr" />
+				<t:checkbox t:id="biota" t:value="need.biota" /><t:label for="biota" class="padr" />
+				<t:checkbox t:id="marine" t:value="need.marine" /><t:label for="marine" /><br />
+				<t:checkbox t:id="terrestrial" t:value="need.terrestrial" /><t:label for="terrestrial" class="padr" />
+				<t:checkbox t:id="endangered" t:value="need.endangered" /><t:label for="endangered" /><br />
+				<t:checkbox t:id="candidateSpecies" t:value="need.candidateSpecies" /><t:label for="candidateSpecies" class="padr"/>
+				<t:checkbox t:id="concernSpecies" t:value="need.concernSpecies" /><t:label for="concernSpecies"  /><br />
+				<t:checkbox t:id="cultural" t:value="need.cultural" /><t:label for="cultural" class="padr" />
+				<t:checkbox t:id="recreationAndTourism" t:value="need.recreationAndTourism" /><t:label for="recreationAndTourism" /><br />
+				<t:checkbox t:id="urban" t:value="need.urban" /><t:label for="urban" class="padr" />
+				<t:checkbox t:id="indigenousPeoples" t:value="need.indigenousPeoples" /><t:label for="indigenousPeoples" /><br />
+				<t:checkbox t:id="minority" t:value="need.minority" /><t:label for="minority" class="padr" />
+				<t:checkbox t:id="economicResources" t:value="need.economicResources" /><t:label for="economicResources" /><br />
+				<t:checkbox t:id="crossDisciplinary" t:value="need.crossDisciplinary" /><t:label for="crossDisciplinary" class="padr" />
+				<t:checkbox t:id="otherSector" t:value="need.otherSector" /><t:label for="otherSector" />
+                
+               
+               </fieldset>
+               
+               <fieldset>
+                <legend>Data</legend>
+                
+				<t:checkbox t:id="insituObservations" t:value="need.insituObservations" /><t:label for="insituObservations" class="padr" />
+				<t:checkbox t:id="satelliteRemoteObservations" t:value="need.satelliteRemoteObservations" /><t:label for="satelliteRemoteObservations" /><br />
+				<t:checkbox t:id="observingSystems" t:value="need.observingSystems" /><t:label for="observingSystems" class="padr" />
+				<t:checkbox t:id="surveysAndPreliminaryAssessments" t:value="need.surveysAndPreliminaryAssessments" /><t:label for="surveysAndPreliminaryAssessments" /><br />
+				<t:checkbox t:id="indicatorBasedResearch" t:value="need.indicatorBasedResearch" /><t:label for="indicatorBasedResearch" class="padr" />
+				<t:checkbox t:id="reanalysisProducts" t:value="need.reanalysisProducts" /><t:label for="reanalysisProducts" /><br />
+				<t:checkbox t:id="depthAndElevationData" t:value="need.depthAndElevationData" /><t:label for="depthAndElevationData" class="padr" />
+				<t:checkbox t:id="dataStewardshipAndProvisions" t:value="need.dataStewardshipAndProvisions" /><t:label for="dataStewardshipAndProvisions" /><br />
+				<t:checkbox t:id="otherData" t:value="need.otherData" /><t:label for="otherData" class="padr" />
+                
+               </fieldset>
+                
+               <fieldset>
+                <legend>Products</legend>
+                
+				<t:checkbox t:id="hindcasts" t:value="need.hindcasts" /><t:label for="hindcasts" class="padr" />
+				<t:checkbox t:id="forecastsAndOutlooks" t:value="need.forecastsAndOutlooks" /><t:label for="forecastsAndOutlooks" class="padr" />
+				<t:checkbox t:id="projections" t:value="need.projections" /><t:label for="projections" class="padr" />
+				<t:checkbox t:id="maps" t:value="need.maps" /><t:label for="maps" class="padr" /><br />
+				<t:checkbox t:id="assessments" t:value="need.assessments" /><t:label for="assessments" class="padr" />
+				<t:checkbox t:id="adaptationPlan" t:value="need.adaptationPlan" /><t:label for="adaptationPlan" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="needsAssessment" t:value="need.needsAssessment" /><t:label for="needsAssessment" class="padr" /> 
+				<t:checkbox t:id="productCapacity" t:value="need.productCapacity" /><t:label for="productCapacity" class="padr" />
+				<t:checkbox t:id="productCapabilities" t:value="need.productCapabilities" /><t:label for="productCapabilities" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="actionPlan" t:value="need.actionPlan" /><t:label for="actionPlan" class="padr" />
+				<t:checkbox t:id="needsActions" t:value="need.needsActions" /><t:label for="needsActions" class="padr" />
+				<t:checkbox t:id="capacity" t:value="need.capacity" /><t:label for="capacity" class="padr" />
+				<t:checkbox t:id="capabilities" t:value="need.capabilities" /><t:label for="capabilities" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="impactStudy" t:value="need.impactStudy" /><t:label for="impactStudy" class="padr" />
+				<t:checkbox t:id="riskAndVulnerability" t:value="need.riskAndVulnerability" /><t:label for="riskAndVulnerability" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="problemFocusedProduct" t:value="need.problemFocusedProduct" /><t:label for="problemFocusedProduct" class="padr" />
+				<t:checkbox t:id="climateScience" t:value="need.climateScience" /><t:label for="climateScience" class="padr" /><br />
+				<t:checkbox t:id="otherProducts" t:value="need.otherProducts" /><t:label for="otherProducts" class="padr" />
+
+
+               </fieldset>
+
+               <fieldset>
+                <legend>Services</legend>
+                
+				<t:checkbox t:id="engagement" t:value="need.engagement" /><t:label for="engagement" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="stakeholderEngagement" t:value="need.stakeholderEngagement" /><t:label for="stakeholderEngagement" class="padr" />
+				<t:checkbox t:id="sectorSpecific" t:value="need.sectorSpecific" /><t:label for="sectorSpecific" class="padr" />
+				<t:checkbox t:id="regionSpecific" t:value="need.regionSpecific" /><t:label for="regionSpecific" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="publicEngagement" t:value="need.publicEngagement" /><t:label for="publicEngagement" class="padr" /><br />
+				<t:checkbox t:id="education" t:value="need.education" /><t:label for="education" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="k12Education" t:value="need.k12Education" /><t:label for="k12Education" class="padr" />
+				<t:checkbox t:id="publicEducation" t:value="need.publicEducation" /><t:label for="publicEducation" class="padr" /><br />
+				<t:checkbox t:id="trainingAndCapacityBuilding" t:value="need.trainingAndCapacityBuilding" /><t:label for="trainingAndCapacityBuilding" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="dataSupportTools" t:value="need.dataSupportTools" /><t:label for="dataSupportTools" class="padr" />
+				<t:checkbox t:id="adaptationAndMitigationGuidance" t:value="need.adaptationAndMitigationGuidance" /><t:label for="adaptationAndMitigationGuidance" class="padr" /><br />
+				<t:checkbox t:id="viewersAndWebBasedTools" t:value="need.viewersAndWebBasedTools" /><t:label for="viewersAndWebBasedTools" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="monitoringTools" t:value="need.monitoringTools" /><t:label for="monitoringTools" class="padr" />
+				<t:checkbox t:id="visualizationTools" t:value="need.visualizationTools" /><t:label for="visualizationTools" class="padr" />
+				<t:checkbox t:id="prioritizationTools" t:value="need.prioritizationTools" /><t:label for="prioritizationTools" class="padr" /><br />
+				<t:checkbox t:id="managementGuidance" t:value="need.managementGuidance" /><t:label for="managementGuidance" class="padr" /><br />&nbsp;&nbsp;
+				<t:checkbox t:id="policyGuidance" t:value="need.policyGuidance" /><t:label for="policyGuidance" class="padr" /><br />
+				<t:checkbox t:id="otherServices" t:value="need.otherServices" /><t:label for="otherServices" class="padr" />
+                
+               </fieldset>
+               
+			</div>
+		</div>
+	</div>
+</div>
+</form>	
+</body>
+</html>

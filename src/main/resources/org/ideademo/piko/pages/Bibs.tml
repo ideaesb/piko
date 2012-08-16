@@ -1,0 +1,41 @@
+<html t:type="layout" title="Bibs List"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+ <body>
+  <h1>Bibliography &amp; Assessments</h1>
+   <div align="center">
+       <form t:type="Form" t:id="searchForm">
+         <input t:type="TextField" t:id="searchText" size="30" value="searchText" />    
+         <t:submit t:id="search" value="Search" /><t:submit t:id="clear" value="Clear/Show All" />  
+  
+       </form>
+   </div>
+  
+  <div style="background-color:orange;text-align:center;font-family:Verdana, Geneva, sans-serif">      
+   <t:pagelink page="bib/${editMode}">Create Record (OR Advanced Search)</t:pagelink>
+  </div>
+  <div align="center">
+  <t:grid source="bibs" row="bibRow" add="delete">
+    <p:deleteCell>
+      <t:actionlink t:id="delete" context="bibRow.id">Delete</t:actionlink>
+    </p:deleteCell>
+    <p:nameCell>
+     <t:pagelink page="bib/${editMode}" context="bibRow.id">${bibRow.name}</t:pagelink>
+    </p:nameCell>
+    <p:descriptionCell>
+     ${bibRow.description}
+       <t:if test="${bibRow.worksheetExists}">
+         (<a href="${url}/${bibRow.worksheet}" target="_blank">More...</a>)
+       <p:else>
+         (<t:pagelink page="bib/upload" context="bibRow.id">Upload ...</t:pagelink>)
+       </p:else>
+       </t:if>
+    </p:descriptionCell>
+     <p:empty>
+       <p>There are no Bibliography &amp; Assessments (matching search criteria); you can <t:pagelink page="bib/${editMode}">add some</t:pagelink> (or <t:actionlink t:id="showAll">show all</t:actionlink>)</p>
+     </p:empty>
+  </t:grid>
+  </div>
+ </body>
+</html>

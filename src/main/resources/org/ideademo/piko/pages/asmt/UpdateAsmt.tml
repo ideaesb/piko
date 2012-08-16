@@ -1,0 +1,120 @@
+<html t:type="dense" title="UPDATE Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+<form t:type="Form" t:id="asmt" class="cmxform">
+<t:errors/>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<div class="col1">
+			
+				<t:label class="blocklbl" for="description" />
+				<t:textArea t:id="description" t:validate="maxlength=4096" rows="5" cols="30" value="entity.description" />
+				<t:label class="blocklbl" for="url" />
+				<t:textArea t:id="url" t:validate="maxlength=255" rows="1" cols="30" value="entity.url" />
+				<t:label class="blocklbl" for="keywords" />
+				<t:textArea t:id="keywords" t:validate="maxlength=4096" rows="5" cols="30" value="entity.keywords" />
+				<t:label class="blocklbl" for="worksheet" />
+				<t:textArea t:id="worksheet" t:validate="maxlength=255" rows="1" cols="30" value="entity.worksheet" />
+              
+              <br /><br />
+              
+                  <t:submit value="Add/Update" />&nbsp;&nbsp;
+                  <t:submit t:id="search" value="Search" />
+                  (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+                  (<t:pagelink page="asmts">CANCEL - go to list</t:pagelink>)
+                  
+              
+
+			</div>
+			<div class="col2">
+
+				<t:label class="blocklbl" for="code" />
+				<t:textArea t:id="code" t:validate="maxlength=255" rows="1" cols="30" value="entity.code" />
+				<t:label class="blocklbl" for="name" />
+				<t:textArea t:id="name" t:validate="maxlength=1024" rows="1" cols="30" value="entity.name" />
+				<t:label class="blocklbl" for="organization" />
+				<t:textArea t:id="organization" t:validate="maxlength=2048" rows="1" cols="30" value="entity.organization" />
+				<t:label class="blocklbl" for="contact" />
+				<t:textArea t:id="contact" t:validate="maxlength=2048" rows="1" cols="30" value="entity.contact" />
+				<t:label class="blocklbl" for="partners" />
+				<t:textArea t:id="partners" t:validate="maxlength=2048" rows="1" cols="30" value="entity.partners" />
+              
+
+               <fieldset>
+                <legend>Assessment Type</legend>
+				<t:checkbox t:id="climateScience" t:value="entity.climateScience"  /><t:label for="climateScience" /><br />
+				<t:checkbox t:id="needsAndCapabilities" t:value="entity.needsAndCapabilities"  /><t:label for="needsAndCapabilities" /><br />
+				<t:checkbox t:id="needs" t:value="entity.needs" class="indent" /><t:label for="needs" class="padr" />
+				<t:checkbox t:id="capacity" t:value="entity.capacity"  /><t:label for="capacity" class="padr" />
+				<t:checkbox t:id="capabilities" t:value="entity.capabilities"  /><t:label for="capabilities" /><br />
+				<t:checkbox t:id="riskVulnerability" t:value="entity.riskVulnerability"  /><t:label for="riskVulnerability" />
+               </fieldset>
+
+               <fieldset>
+                <legend>Area of Applicability</legend>
+				<t:checkbox t:id="international" t:value="entity.international"  /><t:label for="international" class="padr" />
+				<t:checkbox t:id="national" t:value="entity.national"  /><t:label for="national" class="padr" />
+				<t:checkbox t:id="regional" t:value="entity.regional"  /><t:label for="regional" class="padr" />
+               </fieldset>
+               
+               <fieldset>
+                <legend>Focus Area</legend>
+				<t:checkbox t:id="water" t:value="entity.water"  /><t:label for="water" /><br />
+				<t:checkbox t:id="coastal" t:value="entity.coastal"  /><t:label for="coastal" /><br />
+				<t:checkbox t:id="ecosystem" t:value="entity.ecosystem"  /><t:label for="ecosystem" /><br />
+               </fieldset>
+
+
+              <fieldset>
+               <legend>Status</legend>
+				<t:checkbox t:id="completed" t:value="entity.completed"  /><t:label for="completed" class="padr" />
+				<t:checkbox t:id="ongoing" t:value="entity.ongoing"  /><t:label for="ongoing" class="padr" />
+				<t:checkbox t:id="planned" t:value="entity.planned"  /><t:label for="planned" class="padr" />
+				<t:checkbox t:id="proposed" t:value="entity.proposed"  /><t:label for="proposed" class="padr" />
+               </fieldset>
+
+
+			</div>
+			<div class="col3">
+               <fieldset>
+                <legend>Region/Local</legend>
+				<t:checkbox t:id="centralNorthPacific" t:value="entity.centralNorthPacific"  /><t:label for="centralNorthPacific" /><br />
+				<t:checkbox t:id="stateOfHawaii" t:value="entity.stateOfHawaii" class="indent"  /><t:label for="stateOfHawaii" class="padr" />
+				<t:checkbox t:id="northWestHawaiianIslands" t:value="entity.northWestHawaiianIslands"  /><t:label for="northWestHawaiianIslands" /><br />
+				<t:checkbox t:id="pacificRemoteIslands" t:value="entity.pacificRemoteIslands" class="indent" /><t:label for="pacificRemoteIslands" /><br />
+				<t:checkbox t:id="westernNorthPacific" t:value="entity.westernNorthPacific"  /><t:label for="westernNorthPacific" /><br />
+				<t:checkbox t:id="cnmi" t:value="entity.cnmi" class="indent" /><t:label for="cnmi" class="padr" />
+				<t:checkbox t:id="fsm" t:value="entity.fsm"  /><t:label for="fsm" class="padr" />
+				<t:checkbox t:id="guam" t:value="entity.guam"  /><t:label for="guam" class="padr" />
+				<t:checkbox t:id="palau" t:value="entity.palau"  /><t:label for="palau" class="padr" />
+				<t:checkbox t:id="rmi" t:value="entity.rmi"  /><t:label for="rmi" /><br />
+				<t:checkbox t:id="otherWesternNorthPacific" t:value="entity.otherWesternNorthPacific" class="indent" /><t:label for="otherWesternNorthPacific" /><br />
+				<t:checkbox t:id="southPacific" t:value="entity.southPacific"  /><t:label for="southPacific" /><br />
+				<t:checkbox t:id="americanSamoa" t:value="entity.americanSamoa" class="indent" /><t:label for="americanSamoa" class="padr" />
+				<t:checkbox t:id="australia" t:value="entity.australia"  /><t:label for="australia" class="padr" />
+				<t:checkbox t:id="cookIslands" t:value="entity.cookIslands"  /><t:label for="cookIslands" class="padr" />
+				<t:checkbox t:id="fiji" t:value="entity.fiji"  /><t:label for="fiji" /><br />
+				<t:checkbox t:id="frenchPolynesia" t:value="entity.frenchPolynesia" class="indent" /><t:label for="frenchPolynesia" class="padr" />
+				<t:checkbox t:id="kiribati" t:value="entity.kiribati"  /><t:label for="kiribati" class="padr" />
+				<t:checkbox t:id="newZealand" t:value="entity.newZealand"  /><t:label for="newZealand" class="padr" />
+				<t:checkbox t:id="png" t:value="entity.png"  /><t:label for="png" /><br />
+				<t:checkbox t:id="samoa" t:value="entity.samoa" class="indent"  /><t:label for="samoa" class="padr" />
+				<t:checkbox t:id="solomonIslands" t:value="entity.solomonIslands" /><t:label for="solomonIslands" class="padr" />
+				<t:checkbox t:id="tonga" t:value="entity.tonga"  /><t:label for="tonga" class="padr" />
+				<t:checkbox t:id="tuvalu" t:value="entity.tuvalu"  /><t:label for="tuvalu" /><br />
+				<t:checkbox t:id="vanuatu" t:value="entity.vanuatu" class="indent" /><t:label for="vanuatu" class="padr" />
+				<t:checkbox t:id="otherSouthPacific" t:value="entity.otherSouthPacific"  /><t:label for="otherSouthPacific" /><br />
+				<t:checkbox t:id="pacificBasin" t:value="entity.pacificBasin"  /><t:label for="pacificBasin" /><br />
+				<t:checkbox t:id="global" t:value="entity.global"  /><t:label for="global" /><br />
+               </fieldset>
+               
+			</div>
+		</div>
+	</div>
+</div>
+</form>	
+</body>
+</html>

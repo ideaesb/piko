@@ -1,0 +1,41 @@
+<html t:type="layout" title="needs List"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+ <body>
+ <h1>Needs Worksheets</h1>
+   <div align="center">
+       <form t:type="Form" t:id="searchForm">
+         <input t:type="TextField" t:id="searchText" size="30" value="searchText" />    
+         <t:submit t:id="search" value="Search" /><t:submit t:id="clear" value="Clear" />  
+  
+       </form>
+   </div>
+ 
+  <div style="background-color:orange;text-align:center;font-family:Verdana, Geneva, sans-serif">      
+   <t:pagelink page="need/${editMode}">Create Record (OR Advanced Search)</t:pagelink>
+  </div>
+  <div align="center">
+  <t:grid source="needs" row="needRow" add="delete"  include="name,description,keywords,contact">
+    <p:deleteCell>
+      <t:actionlink t:id="delete" context="needRow.id">Delete</t:actionlink>
+    </p:deleteCell>
+    <p:nameCell>
+     <t:pagelink page="need/${editMode}" context="needRow.id">${needRow.name}</t:pagelink>
+    </p:nameCell>
+    <p:descriptionCell>
+     ${needRow.description}
+       <t:if test="${needRow.worksheetExists}">
+         (<a href="${url}/${needRow.worksheet}"  target="_blank">More...</a>)
+       <p:else>
+         (<t:pagelink page="need/upload" context="needRow.id">Upload ...</t:pagelink>)
+       </p:else>
+       </t:if>
+    </p:descriptionCell>
+     <p:empty>
+       <p>There are no Needs Worksheets (matching the search criteria); you can <t:pagelink page="need/${editMode}">add some</t:pagelink> (or <t:actionlink t:id="showAll">show all</t:actionlink>)</p>
+     </p:empty>
+  </t:grid>
+  </div>
+ </body>
+</html>

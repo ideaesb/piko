@@ -1,0 +1,41 @@
+<html t:type="layout" title="Bibs List"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+ <body>
+  <h1>Data, Products &amp; Services</h1>
+   <div align="center">
+       <form t:type="Form" t:id="searchForm">
+         <input t:type="TextField" t:id="searchText" size="30" value="searchText" />    
+         <t:submit t:id="search" value="Search" /><t:submit t:id="clear" value="Clear/Show All" />  
+  
+       </form>
+   </div>
+  
+  <div style="background-color:orange;text-align:center;font-family:Verdana, Geneva, sans-serif">      
+   <t:pagelink page="dap/${editMode}">Create Record (OR Advanced Search)</t:pagelink>
+  </div>
+  <div align="center">
+  <t:grid source="daps" row="dapRow" add="delete" include="name,description,keywords,contact" >
+    <p:deleteCell>
+      <t:actionlink t:id="delete" context="dapRow.id">Delete</t:actionlink>
+    </p:deleteCell>
+    <p:nameCell>
+     <t:pagelink page="dap/${editMode}" context="dapRow.id">${dapRow.name}</t:pagelink>
+    </p:nameCell>
+    <p:descriptionCell>
+     ${dapRow.description}
+       <t:if test="${dapRow.worksheetExists}">
+         (<a href="${url}/${dapRow.worksheet}"  target="_blank">More...</a>)
+       <p:else>
+         (<t:pagelink page="dap/upload" context="dapRow.id">Upload ...</t:pagelink>)
+       </p:else>
+       </t:if>
+    </p:descriptionCell>
+     <p:empty>
+       <p>There are no Data, Products &amp; Services (matching search criteria); you can <t:pagelink page="dap/${editMode}">add some</t:pagelink> (or <t:actionlink t:id="showAll">show all</t:actionlink>)</p>
+     </p:empty>
+  </t:grid>
+  </div>
+ </body>
+</html>

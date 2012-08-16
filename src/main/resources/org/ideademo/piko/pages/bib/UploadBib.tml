@@ -1,0 +1,16 @@
+<html t:type="dense" title="UPLOAD BIB"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+ <body>
+  <h1>Bibliography &amp; Assessments - U P L O A D   W O R K S H E E T</h1>
+   <div align="center">
+   <p>${message}</p>
+   <t:form>
+        <t:errors/>
+        <t:upload t:id="file" t:value="file" validate="required"/><br/>
+        <input type="submit" value="Upload"/>
+    </t:form>
+   </div>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<html t:type="dense" title="UPDATE Assessment"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+<form t:type="Form" t:id="paw" class="cmxform">
+<t:errors/>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<div class="col1">
+			
+			  <t:label for="description" class="blocklbl" />
+              <t:textArea t:id="description" t:validate="maxlength=4096" rows="5" cols="50" value="paw.description" />
+			
+			  <t:label for="objectives" class="blocklbl" />
+              <t:textArea t:id="objectives" t:validate="maxlength=2048" rows="1" cols="50" value="paw.objectives" />
+
+              <t:label for="organization" class="blocklbl" />
+              <t:textArea t:id="organization" t:validate="maxlength=2048" rows="1" cols="50" value="paw.organization" />
+
+              <t:label for="contact" class="blocklbl" />
+              <t:textArea t:id="contact" t:validate="maxlength=2048" rows="1" cols="50" value="paw.contact" />
+
+              <t:label for="partners" class="blocklbl" />
+              <t:textArea t:id="partners" t:validate="maxlength=2048" rows="1" cols="50" value="paw.organization" />
+
+			  <t:label for="resources" class="blocklbl" />
+              <t:textArea t:id="resources" t:validate="maxlength=2048" rows="1" cols="50" value="paw.resources" />
+
+			  <t:label for="dates" class="blocklbl" />
+              <t:textArea t:id="dates" t:validate="maxlength=2048" rows="1" cols="50" value="paw.dates" />
+
+			  <t:label for="feedback" class="blocklbl" />
+              <t:textArea t:id="feedback" t:validate="maxlength=2048" rows="1" cols="50" value="paw.feedback" />
+
+			  <t:label for="url" class="blocklbl" />
+              <t:textArea t:id="url" t:validate="maxlength=255" rows="1" cols="50" value="paw.url" />
+
+			  <t:label for="worksheet" class="blocklbl" />
+              <t:textArea t:id="worksheet" t:validate="maxlength=255" rows="1" cols="50" value="paw.worksheet" />
+
+			  <t:label for="keywords" class="blocklbl" />
+              <t:textArea t:id="keywords" t:validate="maxlength=4096" rows="4" cols="50" value="paw.keywords" />
+              
+              <br /><br />
+              
+                  <t:submit value="Add/Update" />&nbsp;&nbsp;
+                  <t:submit t:id="search" value="Search" />
+                  (<t:pagelink page="prop:componentResources.pageName">CLEAR - form</t:pagelink>)
+                  (<t:pagelink page="paws">CANCEL - go to list</t:pagelink>)
+              
+
+			</div>
+			<div class="col2">
+
+              <t:label for="code" class="blocklbl" />
+              <t:textArea t:id="code" t:validate="maxlength=255" rows="1" size="15" value="paw.code" />
+
+              <t:label for="name" class="blocklbl" />
+              <t:textArea  t:id="name" t:validate="maxlength=1024" rows="1" cols="50" value="paw.name" />
+
+              <fieldset>
+               <legend>Status</legend>
+                <t:checkbox t:id="completed" t:value="paw.completed" /><t:label for="completed" class="padr" />
+                <t:checkbox t:id="ongoing" t:value="paw.ongoing" /><t:label for="ongoing" class="padr"/>
+                <t:checkbox t:id="planned" t:value="paw.planned" /><t:label for="planned" class="padr"/>
+                <t:checkbox t:id="proposed" t:value="paw.proposed" /><t:label for="proposed" class="padr"/>
+               </fieldset>
+              <!-- 
+              <fieldset>
+               <legend>Priority</legend>
+                <t:checkbox t:id="high" t:value="paw.high" /><t:label for="high" class="padr"/>
+                <t:checkbox t:id="low" t:value="paw.low" /><t:label for="low" class="padr"/>
+               </fieldset>
+              -->
+		     <fieldset>
+		      <legend>Focus Area</legend>
+				<t:checkbox t:id="water" t:value="paw.water" /><t:label for="water" /><br />
+				<t:checkbox t:id="coastal" t:value="paw.coastal" /><t:label for="coastal" /><br />
+				<t:checkbox t:id="ecosystem" t:value="paw.ecosystem" /><t:label for="ecosystem" />
+			 </fieldset>
+				
+		     <fieldset>
+		      <legend>Region/Locale</legend>
+				<t:checkbox t:id="centralNorthPacific" t:value="paw.centralNorthPacific"  /><t:label for="centralNorthPacific" /><br />
+				<t:checkbox t:id="stateOfHawaii" t:value="paw.stateOfHawaii" class="indent"  /><t:label for="stateOfHawaii" class="padr" />
+				<t:checkbox t:id="northWestHawaiianIslands" t:value="paw.northWestHawaiianIslands"  /><t:label for="northWestHawaiianIslands" /><br />
+				<t:checkbox t:id="pacificRemoteIslands" t:value="paw.pacificRemoteIslands" class="indent" /><t:label for="pacificRemoteIslands" /><br />
+				<t:checkbox t:id="westernNorthPacific" t:value="paw.westernNorthPacific"  /><t:label for="westernNorthPacific" /><br />
+				<t:checkbox t:id="cnmi" t:value="paw.cnmi" class="indent" /><t:label for="cnmi" class="padr" />
+				<t:checkbox t:id="fsm" t:value="paw.fsm"  /><t:label for="fsm" class="padr" />
+				<t:checkbox t:id="guam" t:value="paw.guam"  /><t:label for="guam" class="padr" />
+				<t:checkbox t:id="palau" t:value="paw.palau"  /><t:label for="palau" class="padr" />
+				<t:checkbox t:id="rmi" t:value="paw.rmi"  /><t:label for="rmi" /><br />
+				<t:checkbox t:id="otherWesternNorthPacific" t:value="paw.otherWesternNorthPacific" class="indent" /><t:label for="otherWesternNorthPacific" /><br />
+				<t:checkbox t:id="southPacific" t:value="paw.southPacific"  /><t:label for="southPacific" /><br />
+				<t:checkbox t:id="americanSamoa" t:value="paw.americanSamoa" class="indent" /><t:label for="americanSamoa" class="padr" />
+				<t:checkbox t:id="australia" t:value="paw.australia"  /><t:label for="australia" class="padr" />
+				<t:checkbox t:id="cookIslands" t:value="paw.cookIslands"  /><t:label for="cookIslands" class="padr" />
+				<t:checkbox t:id="fiji" t:value="paw.fiji"  /><t:label for="fiji" /><br />
+				<t:checkbox t:id="frenchPolynesia" t:value="paw.frenchPolynesia" class="indent" /><t:label for="frenchPolynesia" class="padr" />
+				<t:checkbox t:id="kiribati" t:value="paw.kiribati"  /><t:label for="kiribati" class="padr" />
+				<t:checkbox t:id="newZealand" t:value="paw.newZealand"  /><t:label for="newZealand" class="padr" />
+				<t:checkbox t:id="png" t:value="paw.png"  /><t:label for="png" /><br />
+				<t:checkbox t:id="samoa" t:value="paw.samoa" class="indent"  /><t:label for="samoa" class="padr" />
+				<t:checkbox t:id="solomonIslands" t:value="paw.solomonIslands" /><t:label for="solomonIslands" class="padr" />
+				<t:checkbox t:id="tonga" t:value="paw.tonga"  /><t:label for="tonga" class="padr" />
+				<t:checkbox t:id="tuvalu" t:value="paw.tuvalu"  /><t:label for="tuvalu" /><br />
+				<t:checkbox t:id="vanuatu" t:value="paw.vanuatu" class="indent" /><t:label for="vanuatu" class="padr" />
+				<t:checkbox t:id="otherSouthPacific" t:value="paw.otherSouthPacific"  /><t:label for="otherSouthPacific" /><br />
+				<t:checkbox t:id="pacificBasin" t:value="paw.pacificBasin"  /><t:label for="pacificBasin" /><br />
+				<t:checkbox t:id="global" t:value="paw.global"  /><t:label for="global" /><br />
+			 </fieldset>
+
+
+			</div>
+			<div class="col3">
+             
+             <h3>Capability Area</h3>
+
+              <fieldset>
+               <legend>Understanding Climate Variability and Change</legend>
+				<t:checkbox t:id="variability" t:value="paw.variability"  /><t:label for="variability" /><br />
+				<t:checkbox t:id="varObservations" t:value="paw.varObservations" class="indent" /><t:label for="varObservations" /><br />
+				<t:checkbox t:id="varOperations" t:value="paw.varOperations" class="indent" /><t:label for="varOperations" /><br />
+				<t:checkbox t:id="varResearch" t:value="paw.varResearch" class="indent" /><t:label for="varResearch" /><br />
+				<t:checkbox t:id="varHistorical" t:value="paw.varHistorical" class="indent" /><t:label for="varHistorical" /><br />
+				<t:checkbox t:id="varProjections" t:value="paw.varProjections" class="indent" /><t:label for="varProjections" /><br />
+				<t:checkbox t:id="varTraining" t:value="paw.varTraining" class="indent" /><t:label for="varTraining" /><br />
+				<t:checkbox t:id="varGuidance" t:value="paw.varGuidance" class="indent" /><t:label for="varGuidance" /><br />
+				<t:checkbox t:id="varDecision" t:value="paw.varDecision" class="indent" /><t:label for="varDecision" /><br />
+				<br />Essential Climate Variable/Parameter<br />
+				Atmospheric:
+				<t:checkbox t:id="ecvAtmosphericSurface" t:value="paw.ecvAtmosphericSurface"  /><t:label for="ecvAtmosphericSurface" class="padr"/>
+				<t:checkbox t:id="ecvAtmosphericUpperAir" t:value="paw.ecvAtmosphericUpperAir"  /><t:label for="ecvAtmosphericUpperAir" class="padr" />
+				<t:checkbox t:id="ecvAtmosphericComposition" t:value="paw.ecvAtmosphericComposition"  /><t:label for="ecvAtmosphericComposition" /><br />
+				Oceanic:
+				<t:checkbox t:id="ecvOceanicSurface" t:value="paw.ecvOceanicSurface"  /><t:label for="ecvOceanicSurface" /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<t:checkbox t:id="ecvOceanicSubsurface" t:value="paw.ecvOceanicSubsurface" class="indent" /><t:label for="ecvOceanicSubsurface" /><br />
+				Terrestrial:
+				<t:checkbox t:id="ecvTerrestrial" t:value="paw.ecvTerrestrial"  /><t:label for="ecvTerrestrial" /><br />
+				Time Frame:
+				<t:checkbox t:id="varSeasonal" t:value="paw.varSeasonal"  /><t:label for="varSeasonal" class="padr" />
+				<t:checkbox t:id="varIntraAnnual" t:value="paw.varIntraAnnual"  /><t:label for="varIntraAnnual" class="padr" />
+				<t:checkbox t:id="varMultiDecadal" t:value="paw.varMultiDecadal"  /><t:label for="varMultiDecadal" />
+               </fieldset>
+
+               <fieldset>
+                <legend>Understanding Climate Impacts and Informing Adaptation</legend>
+                <t:checkbox t:id="impacts" t:value="paw.impacts"  /><t:label for="impacts" /><br />
+				<t:checkbox t:id="climateImpacts" t:value="paw.climateImpacts" /><t:label for="climateImpacts" /><br />
+				<t:checkbox t:id="impObservations" t:value="paw.impObservations" class="indent" /><t:label for="impObservations" /><br />
+				<t:checkbox t:id="impResearch" t:value="paw.impResearch"  class="indent" /><t:label for="impResearch" /><br />
+				<t:checkbox t:id="impHistorical" t:value="paw.impHistorical"  class="indent" /><t:label for="impHistorical" /><br />
+				<t:checkbox t:id="impProjections" t:value="paw.impProjections" class="indent" /><t:label for="impProjections" /><br />
+				<br />
+				<t:checkbox t:id="climateAdaptation" t:value="paw.climateAdaptation"  /><t:label for="climateAdaptation" /><br />
+				<t:checkbox t:id="impTraining" t:value="paw.impTraining" class="indent" /><t:label for="impTraining" /><br />
+				<t:checkbox t:id="impGuidance" t:value="paw.impGuidance" class="indent" /><t:label for="impGuidance" /><br />
+				<t:checkbox t:id="impDecision" t:value="paw.impDecision" class="indent" /><t:label for="impDecision" /><br />
+				<t:checkbox t:id="impPolicies" t:value="paw.impPolicies" class="indent" /><t:label for="impPolicies" /><br />
+				<t:checkbox t:id="impAssessment" t:value="paw.impAssessment" class="indent" /><t:label for="impAssessment" /><br />
+                <br />Sector:<br />
+				<t:checkbox t:id="health" t:value="paw.health" /><t:label for="health" class="padr" />
+				<t:checkbox t:id="freshWater" t:value="paw.freshWater" /><t:label for="freshWater" class="padr" />
+				<t:checkbox t:id="energy" t:value="paw.energy" /><t:label for="energy" /><br />
+				<t:checkbox t:id="transportation" t:value="paw.transportation" /><t:label for="transportation" class="padr" />
+				<t:checkbox t:id="planning" t:value="paw.planning" /><t:label for="planning" /><br />
+				<t:checkbox t:id="socioCultural" t:value="paw.socioCultural" /><t:label for="socioCultural" class="padr" />
+				<t:checkbox t:id="agriculture" t:value="paw.agriculture" /><t:label for="agriculture" class="padr" />
+				<t:checkbox t:id="recreation" t:value="paw.recreation" /><t:label for="recreation" /><br />
+				<t:checkbox t:id="ecological" t:value="paw.ecological" /><t:label for="ecological" class="padr" />
+				<t:checkbox t:id="otherSector" t:value="paw.otherSector" /><t:label for="otherSector" />
+               </fieldset>			
+               
+			</div>
+		</div>
+	</div>
+</div>
+</form>	
+</body>
+</html>
