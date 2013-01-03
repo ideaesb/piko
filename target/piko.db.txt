@@ -111,6 +111,84 @@ CREATE TABLE bib (
 ALTER TABLE public.bib OWNER TO postgres;
 
 --
+-- Name: climatology; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE climatology (
+    id bigint NOT NULL,
+    agriculture boolean NOT NULL,
+    americansamoa boolean NOT NULL,
+    atmosphericdata boolean NOT NULL,
+    australia boolean NOT NULL,
+    bleaching boolean NOT NULL,
+    centralnorthpacific boolean NOT NULL,
+    cnmi boolean NOT NULL,
+    code character varying(255),
+    contact character varying(2048),
+    cookislands boolean NOT NULL,
+    current boolean NOT NULL,
+    description character varying(4096),
+    drought boolean NOT NULL,
+    dynamical boolean NOT NULL,
+    ecological boolean NOT NULL,
+    energy boolean NOT NULL,
+    fiji boolean NOT NULL,
+    flooding boolean NOT NULL,
+    frenchpolynesia boolean NOT NULL,
+    freshwater boolean NOT NULL,
+    fsm boolean NOT NULL,
+    future boolean NOT NULL,
+    global boolean NOT NULL,
+    grid boolean NOT NULL,
+    guam boolean NOT NULL,
+    health boolean NOT NULL,
+    insitu boolean NOT NULL,
+    keywords character varying(4096),
+    kiribati boolean NOT NULL,
+    name character varying(1024),
+    newzealand boolean NOT NULL,
+    northwesthawaiianislands boolean NOT NULL,
+    oceanicdata boolean NOT NULL,
+    onemonth boolean NOT NULL,
+    organization character varying(2048),
+    otherphenomena boolean NOT NULL,
+    othersector boolean NOT NULL,
+    othersouthpacific boolean NOT NULL,
+    otherwesternnorthpacific boolean NOT NULL,
+    pacificbasin boolean NOT NULL,
+    pacificremoteislands boolean NOT NULL,
+    palau boolean NOT NULL,
+    past boolean NOT NULL,
+    planning boolean NOT NULL,
+    png boolean NOT NULL,
+    point boolean NOT NULL,
+    rainfall boolean NOT NULL,
+    recreation boolean NOT NULL,
+    remote boolean NOT NULL,
+    rmi boolean NOT NULL,
+    samoa boolean NOT NULL,
+    sixmonths boolean NOT NULL,
+    sociocultural boolean NOT NULL,
+    solomonislands boolean NOT NULL,
+    southpacific boolean NOT NULL,
+    stateofhawaii boolean NOT NULL,
+    statistical boolean NOT NULL,
+    terrestrialdata boolean NOT NULL,
+    threemonths boolean NOT NULL,
+    tonga boolean NOT NULL,
+    transportation boolean NOT NULL,
+    tuvalu boolean NOT NULL,
+    url character varying(255),
+    vanuatu boolean NOT NULL,
+    westernnorthpacific boolean NOT NULL,
+    worksheet character varying(255),
+    worksheetexists boolean NOT NULL
+);
+
+
+ALTER TABLE public.climatology OWNER TO postgres;
+
+--
 -- Name: dap; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -232,7 +310,7 @@ ALTER TABLE public.hibernate_sequence OWNER TO postgres;
 -- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('hibernate_sequence', 392, true);
+SELECT pg_catalog.setval('hibernate_sequence', 409, true);
 
 
 --
@@ -753,6 +831,31 @@ COPY bib (id, description, keywords, name, url, worksheet, worksheetexists) FROM
 
 
 --
+-- Data for Name: climatology; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY climatology (id, agriculture, americansamoa, atmosphericdata, australia, bleaching, centralnorthpacific, cnmi, code, contact, cookislands, current, description, drought, dynamical, ecological, energy, fiji, flooding, frenchpolynesia, freshwater, fsm, future, global, grid, guam, health, insitu, keywords, kiribati, name, newzealand, northwesthawaiianislands, oceanicdata, onemonth, organization, otherphenomena, othersector, othersouthpacific, otherwesternnorthpacific, pacificbasin, pacificremoteislands, palau, past, planning, png, point, rainfall, recreation, remote, rmi, samoa, sixmonths, sociocultural, solomonislands, southpacific, stateofhawaii, statistical, terrestrialdata, threemonths, tonga, transportation, tuvalu, url, vanuatu, westernnorthpacific, worksheet, worksheetexists) FROM stdin;
+393	f	f	t	f	f	t	f	\N	W-HFO.Webmaster@noaa.gov	f	f	The following graphs and charts describe some of the climatology of tropical cyclone activity in the area served by the Central Pacific Hurricane Center, between 140 degrees west longitude and the International Date Line and north of the equator. Continuous satellite coverage has been available in the Central Pacific since 1971 so many climatologies start with that date. Earlier accounts of tropical cyclone activity are based on land, ship, and aircraft observations as well as some non-continuous satellite data.	f	f	f	f	f	t	f	f	f	f	f	t	f	t	t	 Central North Pacific State Of Hawaii North West Hawaiian Islands Pacific Remote Islands Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Heavy Rainfall/Stream Flooding/Mass Wasting  Coastal Flooding/Erosion Region/Nation (Grid) In-Situ Observations Satellite/Remote Observations Public Health and Safety Community Planning and Development	f	Climatology of Tropical Cyclones in the Central Pacific Basin	f	t	t	f	NOAA/NWS/CPHC	f	f	f	f	f	t	f	f	t	f	f	t	f	t	f	f	f	f	f	f	t	f	f	f	f	f	f	http://www.prh.noaa.gov/cphc/pages/climatology.php	f	f	Climatologies_TCCPB.doc	f
+394	f	f	t	f	f	t	f	PSCP	John Marra, NOAA/NESDIS/NCDC Pacific Regional Climate Services Director, john.marra@noaa.gov	f	f	Pacific Storms Climatology Products provides access to an integrated suite of products that delineate patterns and trends of storm frequency and intensity - "storminess"- within the Pacific region. These products will help users to explore how extreme events have been expressed historically and may be expected to be expressed in a changing climate. The Regional Climatology section provides details on how atmospheric and oceanographic features manifest as extreme events within the regions of the Pacific.	f	f	f	f	f	t	f	f	f	f	f	t	f	t	t	 Central North Pacific Western North Pacific South Pacific Pacific Basin Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Heavy Rainfall/Stream Flooding/Mass Wasting  Coastal Flooding/Erosion Other Phenomena Region/Nation (Grid) In-Situ Observations Satellite/Remote Observations Public Health and Safety Community Planning and Development	f	Pacific Storms Climatology Products - Regional Climatology	f	f	t	f	NOAA/NESDIS/NCDC, UOG, OSU, UHSLC, IARC	t	f	f	f	t	f	f	f	t	f	f	t	f	t	f	f	f	f	f	t	f	f	f	f	f	f	f	http://www.pacificstormsclimatology.org/index.php?page=regional-overview	f	t	Climatologies_PSCP.doc	f
+395	t	t	t	f	f	t	t	\N	WRCC, wrcc@dri.edu	f	f	Summaries of Average Maximum Temperature, Average Minimum Temperature, Average Total Precipitation, and Percent of Possible Observations for Period of Record for Hawaii and U.S.-Affiliated Pacific Islands.	t	f	t	f	f	f	f	t	t	f	f	f	t	f	t	 Central North Pacific Western North Pacific State Of Hawaii North West Hawaiian Islands Pacific Remote Islands CNMI FSM Guam Palau RMI South Pacific American Samoa Drought Heavy Rainfall/Stream Flooding/Mass Wasting  Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Location/Site Specific (Point) In-Situ Observations Fresh Water Resources Agriculture and Fisheries Ecosystems	f	Average Monthly Temperature and Precipitation Summaries for Hawaii and U.S.-Affiliated Pacific Islands	f	t	f	f	WRCC, NOAA	f	f	f	f	f	t	t	f	f	f	t	t	f	f	t	f	f	f	f	t	t	f	f	f	f	f	f	http://www.wrcc.dri.edu/summary/climsmhi.html	f	t	Climatologies_AMTPS.doc	f
+396	t	f	t	f	t	f	f	\N	Jan Hafner, APDRC contact, jhafner@hawaii.edu	f	f	Monthly gridded QSCAT sea wind and derived climatologies. The microwave scaterometer (QuikSCAT) flown on QuikBird satellite measures back scatter radiation in Ku-band (~ 14 GHz). The return signal power is proportional to surface stress over the ocean and that can be related to surface wind vector (u and v components) at 10 m height assuming neutral stratification. In addition to u and v components, average wind speed and surface pseudostress vector are provided. The data are remapped to 1/4 degree lat/lon map. Original data as processed by Remote Sensing System were obtained from www.ssmi.com site. Monthly data from Jan 2000 to Dec 2007 were averaged to construct the monthly climatology.	f	f	t	f	f	t	f	f	f	f	t	t	f	f	f	 Global Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Coastal Flooding/Erosion Coral Bleaching/Ecosystem Impacts (e.g., Marine) Other Phenomena Region/Nation (Grid) Satellite/Remote Observations Statistical Model Transportation/Communication and Commerce Agriculture and Fisheries Ecosystems	f	QuikSCAT Monthly Climatology	f	f	f	f	APDRC	t	f	f	f	f	f	f	f	f	f	f	f	f	t	f	f	f	f	f	f	f	t	f	f	f	t	f	http://apdrc.soest.hawaii.edu/datadoc/qscat_mon_clima.php	f	f	Climatologies_QSCAT.doc	f
+397	t	f	f	f	t	f	f	\N	James Holte, jholte@whoi.edu	f	f	We have compiled a mixed layer depth (MLD) climatology using Argo profiles and a new hybrid method for finding the MLD. The climatology incorporates over 681,000 delayed-mode and real-time Argo profiles, collected between 2000 and 2011. The new hybrid algorithm models the general shape of each profile, searches for physical features in the profile, and calculates threshold and gradient MLDs to assemble a suite of possible MLD values. It then analyzes the patterns in the suite to select a final MLD estimate. This algorithm is applied to potential density, potential temperature, and salinity profiles to obtain mixed layers for each of these properties.	f	t	t	f	f	f	f	f	f	f	t	f	f	f	t	 Global Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Coral Bleaching/Ecosystem Impacts (e.g., Marine) Location/Site Specific (Point) In-Situ Observations Dynamical Model Ecosystems Agriculture and Fisheries	f	Argo Mixed Layer Depth Climatology	f	f	t	f	UCSD	f	f	f	f	f	f	f	f	f	f	t	f	f	f	f	f	f	f	f	f	f	f	f	f	f	f	f	http://mixedlayer.ucsd.edu/	f	f	Climatologies_AMLD.doc	f
+399	t	f	t	f	f	f	f	\N	David Legates, Data Producer, legates@cwarren.ccg.uoknor.edu	f	f	Observation of Precipitation data set consists of a global climatology of monthly mean precipitation values, using traditional land-based gauge measurements and shipboard estimates spanning the period from 1920 to 1980. The data are corrected for gauge-induced systematic errors caused by wind, wetting on the interior walls of the gauge and evaporation from the gauge. The corrected monthly precipitation values are then interpolated to a 0.5 degree latitude by 0.5 degree longitude grid using a spherically based interpolation procedure (Legates and Willmott, 1990).This global precipitation climatology is used in verification of climate model predictions of precipitation cycles, large scale hydrological cycle and ecological studies, and evaluating climate change. This data set is archived at the Goddard Space Flight Center Distributed Active Archive Center (GSFC DAAC).	t	f	t	f	f	f	f	t	f	f	t	f	f	f	t	 Global Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Drought Heavy Rainfall/Stream Flooding/Mass Wasting  Location/Site Specific (Point) In-Situ Observations Statistical Model Fresh Water Resources Agriculture and Fisheries Ecosystems	f	Legates Surface and Ship Observation of Precipitation	f	f	f	f	Goddard Earth Sciences Data Information and Services Center (GES DISC), University of Oklahoma, University of Delaware	f	f	f	f	f	f	f	f	f	f	t	t	f	f	f	f	f	f	f	f	f	t	f	f	f	f	f	http://disc.sci.gsfc.nasa.gov/precipitation/documentation/readme_html/legates_gauge_precip_readme.shtml#poc	f	f	Climatologies_LSSOP.doc	f
+400	f	t	t	t	f	f	f	\N	BoM Feedback, http://www.bom.gov.au/other/feedback/	t	f	These maps and charts are based on a statistical analysis of past tropical cyclones tracked over the Australian Region and surrounding waters.	f	f	f	f	t	t	f	f	f	f	f	t	f	t	t	 South Pacific Australia American Samoa Cook Islands Fiji New Zealand PNG Samoa Solomon Islands Tonga Tuvalu Vanuatu Other South Pacific Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Heavy Rainfall/Stream Flooding/Mass Wasting  Coastal Flooding/Erosion Region/Nation (Grid) Satellite/Remote Observations In-Situ Observations Statistical Model Public Health and Safety Community Planning and Development	f	Tropical Cyclone Climatology in the Australian Region	t	f	t	f	BoM	f	f	t	f	f	f	f	f	t	t	f	t	f	t	f	t	f	f	t	t	f	t	f	f	t	f	t	http://www.bom.gov.au/cyclone/climatology/	t	f	Climatologies_TCCAR.doc	f
+401	t	f	t	f	t	f	f	\N	Jan Hafner, APDRC contact, jhafner@hawaii.edu	f	f	AMSR monthly climatologies of SST, wind speed, vapor, cloud water and rain data (2003-01 till 2006-12 inclusive). The Advanced Microwave Scanning Radiometer is flown on Aqua polar orbiter providing full global coverage over the oceans. As a microwave instrument it, can "see" though clouds. The only obstacle is heavy precipitation. Derived measurables are SST, surface wind speed, vertical column vapor and cloud water, and rain rate. The data were acquired from the www.ssmi.com site, then averaged to produce monthly climatologies.	f	f	t	f	f	f	f	t	f	f	t	t	f	f	f	 Global Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Heavy Rainfall/Stream Flooding/Mass Wasting  Coral Bleaching/Ecosystem Impacts (e.g., Marine) Other Phenomena Satellite/Remote Observations Statistical Model Region/Nation (Grid) Fresh Water Resources Transportation/Communication and Commerce Agriculture and Fisheries Ecosystems	f	AMSR-E Monthly Climatology	f	f	t	f	APDRC	t	f	f	f	f	f	f	f	f	f	f	t	f	t	f	f	f	f	f	f	f	t	f	f	f	t	f	http://apdrc.soest.hawaii.edu/datadoc/amsr_mon_clima.php	f	f	Climatologies_AMSRE.doc	f
+402	t	f	t	f	f	f	f	GPCP	Robert Alder, GPCP Manager, robert.f.adler@nasa.gov	f	f	The version 2.2 data, obtained from the NASA Goddard Space Flight Center, combines precipitation estimates from Special Sensor Microwave Imager (SSM/I) emission and scattering algorithms, GOES Precipitation Index (GPI), Outgoing Longwave Precipitation Index (OPI), rain gauges, and TOVS sounders on NOAA polar orbiting satellites. Products include: Annual Total Precipitation derived from 1988-2004 data; Individual Monthly Climatologies derived for 1988-2004; ENSO Precipitation Anomalies for all calendar months combined; ENSO November through April Precipitation Anomalies; and ENSO May through October Precipitation Anomalies.	t	f	t	f	f	f	f	t	f	f	t	t	f	f	t	 In-Situ Observations Satellite/Remote Observations Statistical Model Region/Nation (Grid) Fresh Water Resources Community Planning and Development Agriculture and Fisheries Ecosystems Drought Heavy Rainfall/Stream Flooding/Mass Wasting  Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Global	f	Global Precipitation Climatology Project	f	f	f	f	JISAO, UW, NOAA, NASA	f	f	f	f	f	f	f	f	t	f	f	t	f	t	f	f	f	f	f	f	f	t	f	f	f	f	f	http://jisao.washington.edu/data/gpcp/	f	f	Climalogies_GPCP.doc	f
+403	t	f	t	f	f	t	f	\N	Luke He, Meteorologist, luke.he@noaa.gov	f	f	The NOAA/NWS/Climate Prediction Center developed a precipitation climatology for 66 tropical Pacific Basin stations over the period of 1955-96 (NCEP/CPC ATLAS No. 5). The main purpose of the climatology is to establish a background for defining thresholds of rainfall deficiency amount and duration associated with drought episodes on an individual island-to-island basis.	t	f	t	f	f	f	f	t	f	f	f	f	f	t	t	 Central North Pacific Western North Pacific South Pacific Pacific Basin Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Drought Heavy Rainfall/Stream Flooding/Mass Wasting  Location/Site Specific (Point) In-Situ Observations Statistical Model Public Health and Safety Fresh Water Resources Community Planning and Development Agriculture and Fisheries Ecosystems	f	Precipitation Climatology for Stations in the Tropical Pacific Basin; Effects of ENSO	f	f	f	f	NOAA/NWS/CPC	f	f	f	f	t	f	f	f	t	f	t	t	f	f	f	f	f	f	f	t	f	t	f	f	f	f	f	http://www.cpc.ncep.noaa.gov/pacdir/NINDEX22.shtml	f	t	Climatologies_PCTB.doc	f
+404	f	f	f	f	t	t	f	\N	Martin Hoerling, martin.hoerling@noaa.gov	f	f	The principal mode of interannual sea surface temperature variability in the tropical Pacific Ocean is associated with El Nino. A plot illustrates the spatial pattern of that variability that is succinctly described by the first empirical orthogonal function (EOF1) of the SSTs. A time-series graph shows the monthly evolution of the amplitude and phase of EOF1 from January 1950 to present. Large positive departures, shown in red, denote warm events, whereas large negative departures, shown in blue, denote cold events.	f	f	t	f	f	f	f	f	f	f	f	t	f	f	f	 Central North Pacific Western North Pacific South Pacific Pacific Basin Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Coral Bleaching/Ecosystem Impacts (e.g., Marine) Region/Nation (Grid) Satellite/Remote Observations Statistical Model Ecosystems	f	Current State of El Nino	f	f	t	f	NOAA/ESRL/PSD	f	f	f	f	t	f	f	f	f	f	f	f	f	t	f	f	f	f	f	t	f	t	f	f	f	f	f	http://www.esrl.noaa.gov/psd/enso/impacts/currentclimo.html	f	t	Climatologies_CSEN.doc	f
+398	t	f	f	f	t	f	f	NMLD	NRL, webmaster@nrl.navy.mil	f	f	Monthly climatologies of isothermal layer depth (ILD) and mixed layer depth (MLD) have been constructed at U.S. Naval Research Laboratory (NRL). These monthly ILD and MLD fields have been used for validating the mixed layer in the early development of the global Navy Layered Ocean Model (NLOM) with an embedded mixed layer. They have also been used to study barrier layer formation in the North Pacific Ocean and to examine global ocean mixed layer depth characteristics. These ILD and MLD fields are being made available to the scientific community as the NRL Mixed Layer Depth (NMLD) climatology.	f	t	t	f	f	t	f	f	f	f	t	t	f	f	f	 Global Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Coastal Flooding/Erosion Coral Bleaching/Ecosystem Impacts (e.g., Marine) Region/Nation (Grid) Satellite/Remote Observations Dynamical Model Transportation/Communication and Commerce Ecosystems Agriculture and Fisheries	f	NRL Mixed Layer Depth Climatology	f	f	t	f	NRL	f	f	f	f	f	f	f	f	f	f	f	f	f	t	f	f	f	f	f	f	f	f	f	f	f	t	f	http://www7320.nrlssc.navy.mil/nmld/nmld.html	f	f	Climatologies_NMLD.doc	f
+405	t	f	t	f	f	t	f	\N	WRCC, wrcc@dri.edu	f	f	Climate narrative summaries and tables for the State of Hawaii.	t	f	t	t	f	f	f	t	f	f	f	t	f	t	t	 Central North Pacific State Of Hawaii Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Drought Other Phenomena Heavy Rainfall/Stream Flooding/Mass Wasting  Region/Nation (Grid) In-Situ Observations Satellite/Remote Observations Public Health and Safety Fresh Water Resources Energy Transportation/Communication and Commerce Community Planning and Development Agriculture and Fisheries Recreation and Tourism Ecosystems	f	Climate of Hawaii	f	f	f	f	WRCC, NOAA	t	f	f	f	f	f	f	f	t	f	f	t	t	t	f	f	f	f	f	f	t	f	f	f	f	t	f	http://www.wrcc.dri.edu/narratives/HAWAII.htm	f	f	Climatologies_WRCCHI.doc	f
+406	t	f	f	f	t	f	f	\N	ESRL data, esrl.psd.data@noaa.gov	f	f	Plots created from NOAA Optimum Interpolation (OI) Version 2 Sea Surface Temperature (SST) data. Graphical products include Time-Longitude/Latitude for Yearly Trends and Anomalies, as well as Latest Daily, Weekly, Monthly, and Seasonal for Totals and Anomalies.	f	f	t	f	f	f	f	f	f	f	t	t	f	f	f	 Central North Pacific Western North Pacific Global Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Coral Bleaching/Ecosystem Impacts (e.g., Marine) Region/Nation (Grid) Satellite/Remote Observations Statistical Model Agriculture and Fisheries Ecosystems	f	Sea Surface Temperature Climate Products	f	f	t	f	NOAA/ESRL/PSD	f	f	f	f	f	f	f	f	f	f	f	f	f	t	f	f	f	f	f	f	f	t	f	f	f	f	f	http://www.esrl.noaa.gov/psd/map/clim/sst.shtml	f	f	Climatologies_SSTCP.doc	f
+407	t	f	t	f	t	t	f	\N	TAO Project Office, atlasrt@noaa.gov	f	f	The TAO/TRITON array consists of approximately 70 moorings in the Tropical Pacific Ocean, telemetering oceanographic and meteorological data to shore in real-time via the Argos satellite system. The array is a major component of the ENSO Observing System, the Global Climate Observing System (GCOS) and the Global Ocean Observing System (GOOS). The Southern Oscillation Index and TAO/TRITON Sea Surface Temperature Anomaly Time Series is used for improved detection, understanding and prediction of El Nino and La Nina.	f	f	t	f	f	f	f	f	f	f	f	t	f	f	t	 Central North Pacific Western North Pacific South Pacific Pacific Basin Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Coral Bleaching/Ecosystem Impacts (e.g., Marine) Region/Nation (Grid) In-Situ Observations Statistical Model Ecosystems Agriculture and Fisheries	f	Southern Oscillation Index and TAO/TRITON Sea Surface Temperature Anomaly Time Series	f	f	t	f	NOAA/PMEL	f	f	f	f	t	f	f	f	f	f	f	f	f	f	f	f	f	f	f	t	f	t	f	f	f	f	f	http://www.pmel.noaa.gov/tao/jsdisplay/	f	t	Climatologies_SOITAO.doc	f
+408	t	f	t	f	f	f	f	\N	NCDC Climate Monitoring Branch, CMB.Contact@noaa.gov	f	f	Temperature anomalies and percentiles are shown on gridded maps. The anomaly map is a product of a merged land surface temperature (Global Historical Climatology Network) and sea surface temperature (ERSST.v3b) anomaly analysis developed by Smith et al. (2008). Temperature anomalies for land and ocean are analyzed separately and then merged to form the global analysis. The Global State of the Climate report introduces percentile maps that complement the information provided by the anomaly maps. These new maps provide additional information by placing the temperature anomaly observed for a specific place and time period into historical perspective, showing how the most current month, season or year compares with the past.	t	f	t	f	f	f	f	t	f	f	t	t	f	f	t	 Global Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Drought Heavy Rainfall/Stream Flooding/Mass Wasting  Region/Nation (Grid) In-Situ Observations Satellite/Remote Observations Statistical Model Fresh Water Resources Agriculture and Fisheries Ecosystems Community Planning and Development	f	State of the Climate Global Analysis	f	f	t	f	NOAA/NESDIS/NCDC	f	f	f	f	f	f	f	f	t	f	f	t	f	t	f	f	f	f	f	f	f	t	f	f	f	f	f	http://www.ncdc.noaa.gov/sotc/global/	f	f	Climatologies_SCGA.doc	f
+409	t	f	t	f	t	t	f	PDO	NCDC Climate Monitoring Branch, CMB.Contact@noaa.gov	f	f	The Pacific Decadal Oscillation (PDO) is often described as a long-lived El Nino-like pattern of Pacific climate variability (Zhang et al. 1997). As seen with the better-known El Nino/Southern Oscillation (ENSO), extremes in the PDO pattern are marked by widespread variations in the Pacific Basin and the North American climate. In parallel with the ENSO phenomenon, the extreme phases of the PDO have been classified as being either warm or cool, as defined by ocean temperature anomalies in the northeast and tropical Pacific Ocean.	t	f	t	f	f	f	f	t	f	f	f	t	f	f	f	 Central North Pacific Western North Pacific South Pacific Pacific Basin Atmospheric (e.g., Air Temperature, Rainfall, Wind Speed and Direction) Oceanic (e.g., Water Temperature, Salinity, Acidity, Sea Level, Wave Height) Drought Heavy Rainfall/Stream Flooding/Mass Wasting  Coral Bleaching/Ecosystem Impacts (e.g., Marine) Region/Nation (Grid) Satellite/Remote Observations Statistical Model Fresh Water Resources Community Planning and Development Agriculture and Fisheries Ecosystems	f	Pacific Decadal Oscillation	f	f	t	f	NOAA/NESDIS/NCDC	f	f	f	f	t	f	f	f	t	f	f	t	f	t	f	f	f	f	f	t	f	t	f	f	f	f	f	http://www.ncdc.noaa.gov/teleconnections/pdo/	f	t	Climatologies_PDO.doc	f
+\.
+
+
+--
 -- Data for Name: dap; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1164,6 +1267,14 @@ ALTER TABLE ONLY asmt
 
 ALTER TABLE ONLY bib
     ADD CONSTRAINT bib_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: climatology_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY climatology
+    ADD CONSTRAINT climatology_pkey PRIMARY KEY (id);
 
 
 --
