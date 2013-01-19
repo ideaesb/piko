@@ -1,9 +1,9 @@
-<html title="Climatologies List"
+<html title="Scenarios List"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
 
  <body>
-  <h1>Climatologies</h1>
+  <h1>Scenarios</h1>
    <div align="center">
        <form t:type="Form" t:id="searchForm">
          <input t:type="TextField" t:id="searchText" size="30" value="searchText" />    
@@ -13,7 +13,7 @@
    </div>
   
   <div style="background-color:orange;text-align:center;font-family:Verdana, Geneva, sans-serif">      
-   <t:pagelink page="climatology/create">Create Record (OR Advanced Search)</t:pagelink>
+   <t:pagelink page="scenario/create">Create Record (OR Advanced Search)</t:pagelink>
   </div>
   <div align="center">
   <t:grid source="list" row="row" add="delete" include="name,description,keywords,contact" >
@@ -21,19 +21,19 @@
       <t:actionlink t:id="delete" context="row.id">Delete</t:actionlink>
     </p:deleteCell>
     <p:nameCell>
-     <t:pagelink page="climatology/create" context="row.id">${row.name}</t:pagelink>
+     <t:pagelink page="scenario/create" context="row.id">${row.name}</t:pagelink>
     </p:nameCell>
     <p:descriptionCell>
      ${row.description}
        <t:if test="${row.worksheetExists}">
          (<a href="${url}/${row.worksheet}" target="_blank">More...</a>)
        <p:else>
-         (<t:pagelink page="climatology/upload" context="row.id">Upload ...</t:pagelink>)
+         (<t:pagelink page="scenario/upload" context="row.id">Upload ...</t:pagelink>)
        </p:else>
        </t:if>
     </p:descriptionCell>
      <p:empty>
-       <p>There are no Climatologies (matching search criteria); you can <t:pagelink page="climatology/create">add some</t:pagelink> (or <t:actionlink t:id="showAll">show all</t:actionlink>)</p>
+       <p>There are no Sscenarios (matching search criteria); you can <t:pagelink page="scenario/create">add some</t:pagelink> (or <t:actionlink t:id="showAll">show all</t:actionlink>)</p>
      </p:empty>
   </t:grid>
   </div>
